@@ -7,8 +7,7 @@ git clone git@github.com:cameaann/soc-dashboard.git
 
 ## Rules
 
-1. Always use pull request to apply any changes. Pushing to `main` is prohibited.
-2. 
+1. Always use pull request to apply any changes. Pushing to `main` is prohibited. 
 
 ## Steps to contribute a feature
 
