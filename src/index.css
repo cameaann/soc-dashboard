@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-.wrap-container{
+.chart-container{
   width:300px;
   height:300px;
 }
