@@ -1,4 +1,4 @@
-import LoginAttemptsChart from "./login-attepts-chart";
+import LoginAttemptsChart from "./login-attempts-chart";
 
 const ServerDataComponent = () => {
   return (

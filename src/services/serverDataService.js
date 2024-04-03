@@ -10,10 +10,10 @@ const getLoginAttempts = () => {
           };
     
         loginAttempts = res.reduce((y, x) => {
-            if (x.status === "success") {
+            if (x.event_type==="login" && x.status === "success") {
               y.successed++;
             }
-            if (x.status === "failed") {
+            if (x.event_type==="login" && x.status === "failed") {
               y.failed++;
             }
             return y;
