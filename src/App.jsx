@@ -1,10 +1,10 @@
-import LoginAttemptsChart from "./components/login-attepts-chart";
+import ServerDataComponent from "./components/serverCharts/serverDataComponent";
 
 const App = () => {
   return (
     <div>
       <h1>Dashboard</h1>
-      <LoginAttemptsChart />
+      <ServerDataComponent />
     </div>
   );
 };
