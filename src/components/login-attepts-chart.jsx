@@ -1,10 +1,33 @@
 import { ResponsivePie } from "@nivo/pie";
+import loginAttemptChartService from "../services/loginAttemptChartService";
+import { useEffect, useState } from "react";
 
 const LoginAttemptsChart = () => {
-  const loginAttempts = {
-    failed: 12,
-    successed: 34
+  const [data, setData] = useState([]);
+
+  let loginAttempts = {
+    failed: 0,
+    successed: 0,
   };
+
+  useEffect(() => {
+    loginAttemptChartService.getData().then((response) => {
+      setData(response);
+    });
+  }, []);
+
+  loginAttempts = data.reduce((y, x) => {
+    if (x.status === "success") {
+      y.successed++;
+    }
+    if (x.status === "failed") {
+      y.failed++;
+    }
+    return y;
+  }, loginAttempts);
+
+  console.log(loginAttempts);
+  
   const chartData = [
     {
       id: "failed",
@@ -17,11 +40,12 @@ const LoginAttemptsChart = () => {
       label: "onnistuneet",
       value: loginAttempts.successed,
       color: "hsl(56, 70%, 50%)",
-    }
+    },
   ];
 
   return (
     <div className="chart-container">
+    <h3>Login attempts</h3>
       <ResponsivePie
         data={chartData}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
