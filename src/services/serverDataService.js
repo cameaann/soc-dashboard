@@ -1,28 +1,38 @@
 import { getServerData } from "./socDataService";
 
 const getLoginAttempts = () => {
-    const data = getServerData().then(res => {
-        console.log(res);
+  const data = getServerData().then((res) => {
+    console.log(res);
 
-        let loginAttempts = {
-            failed: 0,
-            successed: 0,
-          };
-    
-        loginAttempts = res.reduce((y, x) => {
-            if (x.event_type==="login" && x.status === "success") {
-              y.successed++;
+    const groupedArray = Object.groupBy(res, ({server_name}) => server_name)
+    console.log(groupedArray)
+
+    let loginAttempts = Object.entries(groupedArray)
+        .map(x => {
+            let emp = {
+                failed: 0,
+                successed: 0,
+                server: x[0]
             }
-            if (x.event_type==="login" && x.status === "failed") {
-              y.failed++;
-            }
-            return y;
-          }, loginAttempts);
-    
-          return loginAttempts;
-    })
-    return data;
-}
+            x[1].reduce((acc, el)=> {
+                if (el.event_type==="login" && el.status === "success" ) {
+                    acc.successed++;
+                }
+                if (el.event_type==="login" && el.status === "failed") {
+                    acc.failed++;
+                }
+                return acc
+            }, emp)
+            return emp
+        })
+        .filter(emp => emp.successed + emp.failed > 0)
+  
+    console.log(loginAttempts);
+    return loginAttempts
+   
+  });
+  return data;
+};
 
 
-export default { getLoginAttempts }
+export default { getLoginAttempts };
