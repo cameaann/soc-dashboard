@@ -22,6 +22,24 @@ const LoginAttemptsChart = () => {
     };
   });
 
+
+  const theme = {
+    axis: {
+      ticks: {
+        text: {
+          fill: 'white' // Set axis label color to white
+        }
+      }
+    },
+    text: {
+          fontSize: 11,
+          fill: "#FFFFFF",
+          color: "#FFFFFF",
+          outlineColor: "#dfd3d3",
+          fontFamily:"Gotham, sans serif"
+        }
+  };
+
   console.log(chartData);
 
   return (
@@ -29,6 +47,7 @@ const LoginAttemptsChart = () => {
       <h3>Login attempts</h3>
 
       <ResponsiveBar
+        theme={theme }
         data={data}
         keys={["successed", "failed"]}
         indexBy="server"
@@ -37,8 +56,9 @@ const LoginAttemptsChart = () => {
         groupMode="grouped"
         valueScale={{ type: "linear" }}
         indexScale={{ type: "band", round: true }}
-        colors={[ "#694BDB", "#FF7777"]}
-        // borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
+        colors={["#694BDB", "#FF7777"]}
+        // borderColor={"#FFFFFF"}
+        borderColor={{ from: "color", modifiers: [["darker", 0.6]] }}
         axisTop={null}
         axisRight={null}
         axisBottom={{
@@ -50,9 +70,15 @@ const LoginAttemptsChart = () => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
+          legend: "login attempts",
+          legendPosition: "end",
+          legendOffset: -40,
+          truncateTickAt: 0,
+          
         }}
         labelSkipWidth={12}
         labelSkipHeight={12}
+        labelTextColor="white"
         legends={[
           {
             dataFrom: "keys",
@@ -82,6 +108,7 @@ const LoginAttemptsChart = () => {
         barAriaLabel={(e) =>
           `${e.id}: Successed - ${e.data.successed}, Failed - ${e.data.failed}`
         }
+        
       />
     </div>
   );

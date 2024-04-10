@@ -1,7 +1,2 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-.chart-container{
-  width:500px;
-  height:300px;
-}
+@import "./assets/styles/fonts.css";
+@import "./assets/styles/layout.css";

@@ -1,0 +1,29 @@
+html{
+  font-size: 62.5%;
+}
+
+:root {
+    font-family: "Morion", "Gotham", sans-serif;
+    --bgColor:#76003B;
+    --textColor:#FFFFFF;
+    --chartLinesColor:#FCD8C6;
+  }
+  .chart-container{
+    width:500px;
+    height:300px;
+  }
+  
+  body{
+    background-color: var(--bgColor);
+    color:var(--textColor);
+    font-size: 1.6rem;
+  }
+
+  h1{
+    font-family: "Morion", sans-serif;
+  }
+  h3{
+    font-size: 1.6rem;
+    font-family: "Gotham", sans-serif;
+    text-transform: uppercase;
+  }
