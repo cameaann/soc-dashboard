@@ -27,7 +27,7 @@ const getLoginAttempts = () => {
         })
         .filter(emp => emp.successed + emp.failed > 0)
   
-    console.log(loginAttempts);
+    // console.log(loginAttempts);
     return loginAttempts
    
   });

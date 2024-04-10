@@ -4,26 +4,84 @@ html{
 
 :root {
     font-family: "Morion", "Gotham", sans-serif;
-    --bgColor:#76003B;
+    --bgColor:#69013B;
     --textColor:#FFFFFF;
-    --chartLinesColor:#FCD8C6;
+    --chartLinesColor:#FCE0D1;
+    --hoverLinkColor:#B10262;
   }
-  .chart-container{
-    width:500px;
-    height:300px;
-  }
-  
+  /* #69023B */
   body{
     background-color: var(--bgColor);
     color:var(--textColor);
     font-size: 1.6rem;
   }
 
-  h1{
+  .component-container{
+    border: 1px solid var(--chartLinesColor);
+    width:100%;
+  }
+
+  .chart-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .chart{
+    width:40rem;
+    height:30rem;
+    margin-inline-start: 4rem;
+  }
+
+  .chart-heading{
+    margin-block-end: -2rem;
+    margin-inline-start: 4rem;
+  }
+  
+  /* Additional information component */
+  .additionInfo-container{
+    /* margin-inline-start: -8rem; */
+  }
+  .additionInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .totalNumberInfo{
+    display: flex;
+    width: 15rem;
+    height: 10rem;
+    font-size: 4.2rem;
+    color: var(--bgColor);
+    background-color: var(--textColor);
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 2rem;
+  }
+  .show-btn{
+    border: 1px solid var(--textColor);
+    background-color: transparent;
+    color: var(--textColor);
+    font-family: 'Gotham', sans-serif;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+  }
+  .show-btn:hover{
+    cursor: pointer;
+    background-color: var(--hoverLinkColor);
+    border:1px solid transparent;
+  }
+  
+  h2{
     font-family: "Morion", sans-serif;
   }
   h3{
-    font-size: 1.6rem;
-    font-family: "Gotham", sans-serif;
+    font-size: 1.2rem;
+    font-family: "Morion", sans-serif;
     text-transform: uppercase;
+    margin-inline-start: 2rem;
+  }
+  h4{
+    font-size: 1.2rem;
+    font-family: "Gotham", sans-serif;
   }

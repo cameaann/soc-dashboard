@@ -2,7 +2,8 @@ import LoginAttemptsChart from "./login-attempts-chart";
 
 const ServerDataComponent = () => {
   return (
-    <div className="comp-container">
+    <div className="component-container">
+    <h3>Palvelimet</h3>
       <LoginAttemptsChart />
     </div>
   );

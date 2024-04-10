@@ -3,7 +3,7 @@ import ServerDataComponent from "./components/serverCharts/serverDataComponent";
 const App = () => {
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h2>Dashboard</h2>
       <ServerDataComponent />
     </div>
   );
