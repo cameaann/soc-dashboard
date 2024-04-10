@@ -52,7 +52,7 @@ const LoginAttemptsChart = () => {
           data={data}
           keys={["successed", "failed"]}
           indexBy="server"
-          margin={{ top: 50, right: 50, bottom: 80, left: 60 }}
+          margin={{ top: 50, right: 50, bottom: 80, left: 30 }}
           padding={0.3}
           groupMode="grouped"
           valueScale={{ type: "linear" }}
@@ -71,7 +71,7 @@ const LoginAttemptsChart = () => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: "login attempts",
+            legend: "",
             legendPosition: "end",
             legendOffset: -40,
             truncateTickAt: 0,
