@@ -1,11 +1,19 @@
-import ServerDataComponent from "./components/serverCharts/serverDataComponent";
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import Layout from './components/layoutComponent';
+import LogsComponent from './components/logsComponent';
+
+const router = createBrowserRouter(createRoutesFromElements(
+<Route>
+<Route exact path = "/" element={<Layout />} />
+<Route path="/logs" element={<LogsComponent />} />
+
+</Route>))
 
 const App = () => {
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <ServerDataComponent />
-    </div>
+    <>
+      <RouterProvider router={router}/>
+    </>
   );
 };
 
