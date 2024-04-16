@@ -42,7 +42,7 @@ const LoginAttemptsChart = () => {
 
   const showLogs = () => {
     console.log("here should be logs");
-   navigate("/logs")
+  navigate("/logs?info=server&data=login-attempts&time=5min")
   };
 
   
