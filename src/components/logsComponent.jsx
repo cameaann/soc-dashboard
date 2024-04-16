@@ -1,41 +1,43 @@
 import { useEffect, useState } from "react";
 import { getLogsData } from "../services/socDataService";
 import { useSearchParams } from "react-router-dom";
+import Log from "./logComponent";
 
 const LogsComponent = () => {
   const [searchParams] = useSearchParams();
   const [data, setData] = useState();
 
+  const service = searchParams.get("service");
+  const logsName = searchParams.get("logs-name");
+  const timePeriod = searchParams.get("time");
+
   useEffect(() => {
-    const filter1 = searchParams.get("info");
-    const filter2 = searchParams.get("data");
-    const timePeriod = searchParams.get("time");
-    getLogsData(filter1, filter2, timePeriod).then((res) => {
+    getLogsData(service, logsName, timePeriod).then((res) => {
       setData(res);
     });
-  }, [searchParams]);
+  }, [service, logsName, timePeriod]);
 
   let listItems;
-    if(data){
-        listItems = data.map(server => {
-            return server.map(attempt => <li className="log" key={attempt.id}>Käyttäjä {attempt.username} kirjautui palvelimelle {attempt.server_name} {attempt.status === "success"? "onnistuneesti": "epäonnistuneesti"} klo {attempt.timestamp}</li>)
-        } 
-      );
-    }
 
-const formatString = (val)=>{
-    let fStr= val.split("-").join(" ");
+  if (data) {
+    listItems = data.map((server) => {
+      return server.map((logItem) => (
+        <Log key = {logItem.timestamp} log = {logItem} serviceType = {service} logsName = {logsName}/>
+      ));
+    });
+  }
+
+  const formatString = (val) => {
+    let fStr = val.split("-").join(" ");
     return fStr;
-}
+  };
 
   console.log(data);
 
   return (
     <div>
-     <h2 className="main-heading">{formatString(searchParams.get("data"))} logs</h2>
-
-     <ul>{listItems}</ul>
-      
+      <h2 className="main-heading">{formatString(logsName)} logs</h2>
+      <ul>{listItems}</ul>
     </div>
   );
 };

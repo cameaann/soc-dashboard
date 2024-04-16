@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import serverDataService from "../../services/serverDataService";
 import AdditionalInfo from "../additionalInfoComponent";
 
-
 const LoginAttemptsChart = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
@@ -34,18 +33,14 @@ const LoginAttemptsChart = () => {
 
   console.log(data);
 
-  const totalAttempts = data.reduce((sum, x)=>{
-    sum += x.failed + x.successed
-    return sum
-  }, 0)
-
+  const totalAttempts = data.reduce((sum, x) => {
+    sum += x.failed + x.successed;
+    return sum;
+  }, 0);
 
   const showLogs = () => {
-    console.log("here should be logs");
-  navigate("/logs?info=server&data=login-attempts&time=5min")
+    navigate("/logs?service=server&logs-name=login-attempts&time=5min");
   };
-
-  
 
   return (
     <div className="chart-container">
@@ -96,7 +91,7 @@ const LoginAttemptsChart = () => {
               itemHeight: 20,
               itemDirection: "left-to-right",
               itemOpacity: 0.85,
-              symbolShape: 'circle',
+              symbolShape: "circle",
               symbolSize: 10,
               effects: [
                 {
@@ -115,8 +110,7 @@ const LoginAttemptsChart = () => {
           }
         />
       </div>
-      <AdditionalInfo onShowLogs = {showLogs} totalNumber = {totalAttempts} />
-   
+      <AdditionalInfo onShowLogs={showLogs} totalNumber={totalAttempts} />
     </div>
   );
 };
