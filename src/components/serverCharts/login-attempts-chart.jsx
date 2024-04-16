@@ -1,10 +1,13 @@
 import { ResponsiveBar } from "@nivo/bar";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import serverDataService from "../../services/serverDataService";
 import AdditionalInfo from "../additionalInfoComponent";
 
+
 const LoginAttemptsChart = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     serverDataService.getLoginAttempts().then((res) => {
@@ -39,6 +42,7 @@ const LoginAttemptsChart = () => {
 
   const showLogs = () => {
     console.log("here should be logs");
+  navigate("/logs?info=server&data=login-attempts&time=5min")
   };
 
   
