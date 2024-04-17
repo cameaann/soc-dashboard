@@ -1,5 +1,5 @@
 import ServerDataComponent from "./serverCharts/serverDataComponent"
-import FirewallActionPieChart from "./components/FirewallActionPieChart";
+import FirewallActionPieChart from "./FirewallActionPieChart";
 
 const Layout = () =>{
     return(

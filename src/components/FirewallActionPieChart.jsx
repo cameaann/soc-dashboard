@@ -1,34 +1,30 @@
-import { useEffect, useState } from "react";
-import { getFirewallData } from "../services/firewallDataService";
-import { ResponsivePie } from "@nivo/pie";
+import { useEffect, useState } from 'react';
+import { getFirewallData } from '../services/firewallDataService';
+import EventsDistribution from './firewallCharts/EventsDistribution';
 
 const FirewallActionPieChart = () => {
-  const [actions, setActions] = useState([])
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
     getFirewallData().then((result) => {
-      const grouped = Object.groupBy(result, ({action}) => action)
+      const grouped = Object.groupBy(result, ({ action }) => action);
       const data = Object.keys(grouped).map((item) => {
         return {
-          id: item, 
+          id: item,
           label: item,
-          value: grouped[item].length
-        }
-      })
-      setActions(data)
-    })
-  },[])
+          value: grouped[item].length,
+        };
+      });
+      setEvents(data);
+    });
+  }, []);
 
   return (
-    <div style={{width: '100%', height: '30rem'}}>
-      <h2>Palomuuri</h2>
-      <ResponsivePie 
-        data={actions}
-        arcLinkLabelsTextColor="#fff"
-      />
+    <div className="component-container">
+      <h3>Palomuuri</h3>
+      <EventsDistribution events={events} />
     </div>
-
-  )
-}
+  );
+};
 
 export default FirewallActionPieChart;

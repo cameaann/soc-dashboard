@@ -1,1 +1,1 @@
-export const DATA_URL = 'https://soc-mock-server.yellowmeadow-5ebf02da.northeurope.azurecontainerapps.io/dynlogs'
+export const DATA_URL = 'https://app-soc-data-server.wonderfulcliff-356171e4.northeurope.azurecontainerapps.io/dynlogs'
