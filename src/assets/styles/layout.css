@@ -8,6 +8,9 @@ html{
     --textColor:#FFFFFF;
     --chartLinesColor:#FCE0D1;
     --hoverLinkColor:#B10262;
+    --textHighLight1:#94d5f1;
+    --textHighLight2:#FCE0D1;
+    --textHighLight3:#e6aacb;
   }
   /* #69023B */
   body{
@@ -93,7 +96,19 @@ html{
   }
 
   .log{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: "Gotham", sans-serif;
     line-height: 1.5;
+  }
+  .user{
+    color: var(--textHighLight2);
+  }
+  .service{
+    color: var(--textHighLight1);
+  }
+  .date{
+    color: var(--textHighLight3)
+  }
+  .time{
+    color: var(--textHighLight3);
   }
