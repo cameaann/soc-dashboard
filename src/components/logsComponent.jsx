@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getLogsData } from "../services/socDataService";
 import { useSearchParams } from "react-router-dom";
 import Log from "./logComponent";
+import Header from "./header";
 
 const LogsComponent = () => {
   const [searchParams] = useSearchParams();
@@ -34,8 +35,13 @@ const LogsComponent = () => {
 
   console.log(data);
 
+  const handleOnChange = (option) => {
+    console.log(option);
+  };
+
   return (
     <div>
+      <Header handleChange = {handleOnChange}/>
       <h2 className="main-heading">{formatString(logsName)} logs</h2>
       <ul>{listItems}</ul>
     </div>
