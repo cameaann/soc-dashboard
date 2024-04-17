@@ -1,13 +1,13 @@
 import {
   Route,
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
 import Layout from "./components/layoutComponent";
 import LogsComponent from "./components/logsComponent";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route>
       <Route exact path="/" element={<Layout />} />
