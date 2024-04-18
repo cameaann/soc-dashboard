@@ -18,15 +18,9 @@ const getLogsData = async (info, data, timePeriod) => {
   console.log(info, data, timePeriod);
   if (info === 'server') {
     const res = await axios.get(serverDataUrl);
-    const groupedArray = Object.groupBy(
-      res.data,
-      ({ server_name }) => server_name
-    );
+    
     if (data === 'login-attempts') {
-      let loginAttempts = Object.entries(groupedArray).map((x) => {
-        let sortArr = x[1].filter((el) => el.event_type === 'login');
-        return sortArr;
-      });
+      let loginAttempts = res.data.filter(x => x.event_type === 'login')
       console.log('loginAttempts', loginAttempts);
       return loginAttempts;
     }

@@ -1,3 +1,5 @@
+import filterTimeService from "../services/filterTimeService";
+
 const Filter = ({handleChange}) => {
     const options = [
         "Viimeisen tunnin aikana",
@@ -6,6 +8,8 @@ const Filter = ({handleChange}) => {
     ];
 
     const handleOnChange = (event) =>{
+        console.log(filterTimeService.getTime(event.target.value));
+        console.log(event.target.value);
         handleChange(event.target.value)
     }
 

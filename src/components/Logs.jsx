@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { getLogsData } from "../services/socDataService";
 import { useSearchParams } from "react-router-dom";
-import Log from "./logComponent";
-import Header from "./header";
+import Log from "./Log";
+import Header from "./Header";
 
 const LogsComponent = () => {
   const [searchParams] = useSearchParams();
   const [data, setData] = useState();
 
-  const service = searchParams.get('service');
-  const logsName = searchParams.get('logs-name');
-  const timePeriod = searchParams.get('time');
+  const service = searchParams.get("service");
+  const logsName = searchParams.get("logs-name");
+  const timePeriod = searchParams.get("time");
 
   useEffect(() => {
     getLogsData(service, logsName, timePeriod).then((res) => {
@@ -20,32 +20,21 @@ const LogsComponent = () => {
 
   let listItems;
 
-  if (data && service === 'server') {
-    listItems = data.map((server) => {
-      return server.map((logItem) => (
-        <Log
-          key={logItem.timestamp}
-          log={logItem}
-          serviceType={service}
-          logsName={logsName}
-        />
-      ));
-    });
-  } else if (data && service === 'firewall') {
+  if (data) {
     listItems = data.map((logItem) => {
-      return (
+        return(
         <Log
           key={logItem.timestamp}
           log={logItem}
           serviceType={service}
           logsName={logsName}
-        />
-      );
+        />)
     });
+  
   }
 
   const formatString = (val) => {
-    let fStr = val.split('-').join(' ');
+    let fStr = val.split("-").join(" ");
     return fStr;
   };
 
@@ -57,7 +46,7 @@ const LogsComponent = () => {
 
   return (
     <div>
-      <Header handleChange = {handleOnChange}/>
+      <Header handleChange={handleOnChange} />
       <h2 className="main-heading">{formatString(logsName)} logs</h2>
       <ul>{listItems}</ul>
     </div>

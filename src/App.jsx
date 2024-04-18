@@ -4,8 +4,8 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
-import Layout from './components/layoutComponent';
-import LogsComponent from './components/logsComponent';
+import Layout from './components/Layout';
+import LogsComponent from './components/Logs';
 
 const router = createHashRouter(
   createRoutesFromElements(

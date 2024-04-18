@@ -1,4 +1,4 @@
-import Filter from "./filterComponent";
+import Filter from "./Filter";
 
 const Header = ({handleChange}) => {
 
