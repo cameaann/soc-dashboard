@@ -1,4 +1,4 @@
-html{
+html {
   font-size: 62.5%;
 }
 
@@ -24,61 +24,67 @@ html{
     align-items: center;
   }
 
-  .component-container{
-    border: 1px solid var(--chartLinesColor);
-    width:100%;
-  }
+.component-container {
+  border: 1px solid var(--chartLinesColor);
+  width: 100%;
+}
 
-  .chart-container{
-    display: flex;
-    flex-direction: row;
-  }
+.chart-container {
+  display: flex;
+  flex-direction: row;
+}
 
-  .chart{
-    width:40rem;
-    height:30rem;
-    margin-inline-start: 4rem;
-  }
+.chart {
+  width: 40rem;
+  height: 30rem;
+  margin-inline-start: 4rem;
+}
 
-  .chart-heading{
-    margin-block-end: -2rem;
-    margin-inline-start: 2rem;
-  }
-  
-  /* Additional information component */
-  .additionInfo-container{
-    /* margin-inline-start: -8rem; */
-  }
-  .additionInfo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .totalNumberInfo{
-    display: flex;
-    width: 15rem;
-    height: 10rem;
-    font-size: 4.2rem;
-    color: var(--bgColor);
-    background-color: var(--textColor);
-    border-radius: .5rem;
-    align-items: center;
-    justify-content: center;
-    margin-block-end: 2rem;
-  }
-  .show-btn{
-    border: 1px solid var(--textColor);
-    background-color: transparent;
-    color: var(--textColor);
-    font-family: 'Gotham', sans-serif;
-    width: fit-content;
-    padding: 1rem 1.5rem;
-  }
-  .show-btn:hover{
-    cursor: pointer;
-    background-color: var(--hoverLinkColor);
-    border:1px solid transparent;
-  }
+.chart-heading {
+  margin-block-end: -2rem;
+  margin-inline-start: 2rem;
+}
+
+.pie-chart {
+  position: relative;
+  height: 20rem;
+  top: 5rem;
+}
+
+/* Additional information component */
+.additionInfo-container {
+  /* margin-inline-start: -8rem; */
+}
+.additionInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.totalNumberInfo {
+  display: flex;
+  width: 15rem;
+  height: 10rem;
+  font-size: 4.2rem;
+  color: var(--bgColor);
+  background-color: var(--textColor);
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 2rem;
+}
+.show-btn {
+  border: 1px solid var(--textColor);
+  background-color: transparent;
+  color: var(--textColor);
+  font-family: 'Gotham', sans-serif;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+}
+.show-btn:hover {
+  cursor: pointer;
+  background-color: var(--hoverLinkColor);
+  border: 1px solid transparent;
+}
   
   h2{
     font-family: "Morion", sans-serif;
@@ -95,11 +101,11 @@ html{
     font-family: "Gotham", sans-serif;
   }
 
-  /* LOGS COMPONENT */
-  .main-heading{
-    text-transform: capitalize;
-    margin-inline-start: 4rem;
-  }
+/* LOGS COMPONENT */
+.main-heading {
+  text-transform: capitalize;
+  margin-inline-start: 4rem;
+}
 
   .log{
     font-size: 1.6rem;
@@ -136,3 +142,4 @@ html{
   select>option{
     font-family: inherit;
   }
+

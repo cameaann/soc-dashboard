@@ -8,9 +8,9 @@ const LogsComponent = () => {
   const [searchParams] = useSearchParams();
   const [data, setData] = useState();
 
-  const service = searchParams.get("service");
-  const logsName = searchParams.get("logs-name");
-  const timePeriod = searchParams.get("time");
+  const service = searchParams.get('service');
+  const logsName = searchParams.get('logs-name');
+  const timePeriod = searchParams.get('time');
 
   useEffect(() => {
     getLogsData(service, logsName, timePeriod).then((res) => {
@@ -20,16 +20,32 @@ const LogsComponent = () => {
 
   let listItems;
 
-  if (data) {
+  if (data && service === 'server') {
     listItems = data.map((server) => {
       return server.map((logItem) => (
-        <Log key = {logItem.timestamp} log = {logItem} serviceType = {service} logsName = {logsName}/>
+        <Log
+          key={logItem.timestamp}
+          log={logItem}
+          serviceType={service}
+          logsName={logsName}
+        />
       ));
+    });
+  } else if (data && service === 'firewall') {
+    listItems = data.map((logItem) => {
+      return (
+        <Log
+          key={logItem.timestamp}
+          log={logItem}
+          serviceType={service}
+          logsName={logsName}
+        />
+      );
     });
   }
 
   const formatString = (val) => {
-    let fStr = val.split("-").join(" ");
+    let fStr = val.split('-').join(' ');
     return fStr;
   };
 
