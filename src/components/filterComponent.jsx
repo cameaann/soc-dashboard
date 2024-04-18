@@ -1,8 +1,8 @@
 const Filter = ({handleChange}) => {
     const options = [
-        "Viimeinen tunti",
-        "Viimeinen päivä",
-        "Viimeinen viikko",
+        "Viimeisen tunnin aikana",
+        "Viimeisen päivän aikana",
+        "Viimeisen viikon aikana",
     ];
 
     const handleOnChange = (event) =>{
