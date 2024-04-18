@@ -4,9 +4,10 @@ import { useNavigate } from "react-router-dom";
 import serverDataService from "../../services/serverDataService";
 import AdditionalInfo from "../additionalInfoComponent";
 
-const LoginAttemptsChart = () => {
+const LoginAttemptsChart = ({time}) => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
+  console.log(time);
 
   useEffect(() => {
     serverDataService.getLoginAttempts().then((res) => {

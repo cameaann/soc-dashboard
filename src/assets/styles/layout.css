@@ -3,21 +3,26 @@ html {
 }
 
 :root {
-  font-family: 'Morion', 'Gotham', sans-serif;
-  --bgColor: #69013b;
-  --textColor: #ffffff;
-  --chartLinesColor: #fce0d1;
-  --hoverLinkColor: #b10262;
-  --textHighLight1: #94d5f1;
-  --textHighLight2: #fce0d1;
-  --textHighLight3: #e6aacb;
-}
-/* #69023B */
-body {
-  background-color: var(--bgColor);
-  color: var(--textColor);
-  font-size: 1.6rem;
-}
+    font-family: "Morion", "Gotham", sans-serif;
+    --bgColor:#69013B;
+    --textColor:#FFFFFF;
+    --chartLinesColor:#FCE0D1;
+    --hoverLinkColor:#B10262;
+    --textHighLight1:#94d5f1;
+    --textHighLight2:#FCE0D1;
+    --textHighLight3:#e6aacb;
+  }
+  /* #69023B */
+  body{
+    background-color: var(--bgColor);
+    color:var(--textColor);
+    font-size: 1.6rem;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
 .component-container {
   border: 1px solid var(--chartLinesColor);
@@ -80,20 +85,21 @@ body {
   background-color: var(--hoverLinkColor);
   border: 1px solid transparent;
 }
-
-h2 {
-  font-family: 'Morion', sans-serif;
-}
-h3 {
-  font-size: 1.2rem;
-  font-family: 'Morion', sans-serif;
-  text-transform: uppercase;
-  margin-inline-start: 2rem;
-}
-h4 {
-  font-size: 1.2rem;
-  font-family: 'Gotham', sans-serif;
-}
+  
+  h2{
+    font-family: "Morion", sans-serif;
+    font-size: 1.8rem;
+  }
+  h3{
+    font-size: 1.2rem;
+    font-family: "Morion", sans-serif;
+    text-transform: uppercase;
+    margin-inline-start: 2rem;
+  }
+  h4{
+    font-size: 1.2rem;
+    font-family: "Gotham", sans-serif;
+  }
 
 /* LOGS COMPONENT */
 .main-heading {
@@ -101,20 +107,39 @@ h4 {
   margin-inline-start: 4rem;
 }
 
-.log {
-  font-size: 1.6rem;
-  font-family: 'Gotham', sans-serif;
-  line-height: 1.5;
-}
-.user {
-  color: var(--textHighLight2);
-}
-.service {
-  color: var(--textHighLight1);
-}
-.date {
-  color: var(--textHighLight3);
-}
-.time {
-  color: var(--textHighLight3);
-}
+  .log{
+    font-size: 1.6rem;
+    font-family: "Gotham", sans-serif;
+    line-height: 1.5;
+  }
+  .user{
+    color: var(--textHighLight2);
+  }
+  .service{
+    color: var(--textHighLight1);
+  }
+  .date{
+    color: var(--textHighLight3)
+  }
+  .time{
+    color: var(--textHighLight3);
+  }
+
+
+  /* FILTER COMPONENT */
+  .filter{
+    font-family: inherit;
+    width:22rem;
+    border: 1px solid var(--chartLinesColor);
+    background-color: var(--bgColor);
+    background-image: url('../images/icons/clock.svg');
+    background-repeat: no-repeat;
+	  background-position: 0.4em center;
+    color: var(--textColor);
+    padding:0.5em 0.5em 0.4em 2.5em;
+    background-size: 1.5em auto;
+  }
+  select>option{
+    font-family: inherit;
+  }
+
