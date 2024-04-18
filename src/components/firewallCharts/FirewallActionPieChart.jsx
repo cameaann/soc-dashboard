@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { getFirewallData } from '../services/firewallDataService';
-import EventsDistribution from './firewallCharts/EventsDistribution';
+import { getFirewallData } from '../../services/firewallDataService';
+import EventsDistribution from './EventsDistribution';
 
 const FirewallActionPieChart = () => {
   const [events, setEvents] = useState([]);

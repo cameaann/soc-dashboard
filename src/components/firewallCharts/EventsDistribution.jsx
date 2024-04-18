@@ -8,7 +8,9 @@ const EventsDistribution = ({ events }) => {
   const total = events.reduce((acc, item) => acc + item.value, 0);
 
   const handleShowLogs = () => {
-    navigate('/firewallLogs?time=5min');
+    navigate(
+      '/logs?service=firewall&logs-name=firewall-distribution&time=5min'
+    );
   };
 
   return (

@@ -33,6 +33,7 @@ const getLogsData = async (info, data, timePeriod) => {
   }
   if (info === 'firewall') {
     const res = await axios.get(firewallDataUrl);
+    console.log(res.data);
     return res.data;
   }
 };
