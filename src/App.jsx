@@ -3,9 +3,9 @@ import {
   createHashRouter,
   createRoutesFromElements,
   RouterProvider,
-} from "react-router-dom";
-import Layout from "./components/layoutComponent";
-import LogsComponent from "./components/logsComponent";
+} from 'react-router-dom';
+import Layout from './components/layoutComponent';
+import LogsComponent from './components/logsComponent';
 
 const router = createHashRouter(
   createRoutesFromElements(
