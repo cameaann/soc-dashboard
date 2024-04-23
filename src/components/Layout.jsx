@@ -4,7 +4,7 @@ import ServerData from "./serverCharts/ServerData";
 import FirewallActionPieChart from "./firewallCharts/FirewallActionPieChart";
 
 const Layout = () => {
-  const [timeFilter, setTimeFilter] = useState("60 min");
+  const [timeFilter, setTimeFilter] = useState("hour");
 
   const handleOnChange = (time) => {
     setTimeFilter(time);

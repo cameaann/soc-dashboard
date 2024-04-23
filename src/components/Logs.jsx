@@ -7,10 +7,15 @@ import Header from "./Header";
 const LogsComponent = () => {
   const [searchParams] = useSearchParams();
   const [data, setData] = useState();
+  const [filter, setFilter] = useState();
 
   const service = searchParams.get("service");
   const logsName = searchParams.get("logs-name");
   const timePeriod = searchParams.get("time");
+
+  if(timePeriod){
+    setFilter(timePeriod)
+  }
 
   useEffect(() => {
     getLogsData(service, logsName, timePeriod).then((res) => {

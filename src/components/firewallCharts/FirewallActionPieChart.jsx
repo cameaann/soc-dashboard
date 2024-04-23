@@ -1,22 +1,15 @@
 import { useEffect, useState } from 'react';
-import { getFirewallData } from '../../services/firewallDataService';
+import firewallDataService  from '../../services/firewallDataService';
 import EventsDistribution from './EventsDistribution';
 
 const FirewallActionPieChart = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    getFirewallData().then((result) => {
-      const grouped = Object.groupBy(result, ({ action }) => action);
-      const data = Object.keys(grouped).map((item) => {
-        return {
-          id: item,
-          label: item,
-          value: grouped[item].length,
-        };
-      });
-      setEvents(data);
-    });
+    firewallDataService.getEventDistribution().then(res => {
+      setEvents(res)
+    })
+
   }, []);
 
   return (
