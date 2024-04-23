@@ -1,14 +1,16 @@
 import Filter from "./Filter";
+import { useFilter } from "./FilterContext";
 
-const Header = ({handleChange}) => {
+const Header = () => {
+const { timeFilter, setTimeFilter } = useFilter();
 
-const handleOnChange = (option) => {
-    handleChange(option)
+const handleOnChange = (filter) => {
+    setTimeFilter(filter);
   };
     return(
         <div className="header">
         <h2>Dashboard</h2>
-        <Filter handleChange={handleOnChange} />
+        <Filter handleChange={handleOnChange} filter={timeFilter}/>
       </div>
     )
 }

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import serverDataService from "../../services/serverDataService";
 import AdditionalInfo from "../AdditionalInfo";
 
+
 const LoginAttemptsChart = (props) => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
@@ -11,10 +12,10 @@ const LoginAttemptsChart = (props) => {
   const { time } = { ...props };
 
   useEffect(() => {
-    serverDataService.getLoginAttempts().then((res) => {
+    serverDataService.getLoginAttempts(time).then((res) => {
       setData(res);
     });
-  }, []);
+  }, [time]);
 
   const theme = {
     axis: {
@@ -39,7 +40,8 @@ const LoginAttemptsChart = (props) => {
   }, 0);
 
   const showLogs = () => {
-    navigate(`/logs?service=server&logs-name=login-attempts&time=${time}`);
+    // navigate(`/logs?service=server&logs-name=login-attempts&time=${time}`);
+    navigate(`/logs?service=server&logs-name=login-attempts`);
   };
 
   return (

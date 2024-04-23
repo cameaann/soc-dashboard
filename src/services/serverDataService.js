@@ -1,11 +1,13 @@
 import { getServerData } from "./socDataService";
+import { applyTimeFilter } from "./filterTimeService";
 
-const getLoginAttempts = () => {
+const getLoginAttempts = (time) => {
   const data = getServerData().then((res) => {
-    console.log(res);
 
-    const groupedArray = Object.groupBy(res, ({server_name}) => server_name)
-    console.log(groupedArray)
+    const filteredByTimeData = applyTimeFilter(res, time)
+    console.log(filteredByTimeData);
+
+    const groupedArray = Object.groupBy(filteredByTimeData, ({server_name}) => server_name)
 
     let loginAttempts = Object.entries(groupedArray)
         .map(x => {
@@ -27,7 +29,6 @@ const getLoginAttempts = () => {
         })
         .filter(emp => emp.successed + emp.failed > 0)
   
-    // console.log(loginAttempts);
     return loginAttempts
    
   });

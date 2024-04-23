@@ -2,14 +2,18 @@ import dayjs from "dayjs";
 
 const getStartTime = (timeString, currentTime) => {
   switch (timeString) {
-    case "Viimeisen tunnin aikana":
+    case "hour":
       return currentTime.subtract(1, "hour");
 
-    case "Viimeisen päivän aikana":
+    case "day":
       return currentTime.subtract(1, "day");
 
-    case "Viimeisen viikon aikana":
+    case "week":
+      
       return currentTime.subtract(1, "week");
+
+    case "month":
+      return currentTime.subtract(1, "month");
 
     default:
       throw new Error("Unexpected parameter")
@@ -22,10 +26,11 @@ const applyTimeFilter = (arr, time) => {
 
   const filteredData = arr.filter(
     (item) =>
-      dayjs(item.timestamp).isAfter(startTime) ||
-      dayjs(item.timestamp).isSame(currentTime, "hour")
+      dayjs(item.timestamp).isAfter(startTime) &&
+      dayjs(item.timestamp).isBefore(currentTime)
   );
+
   return filteredData;
 };
 
-export default { applyTimeFilter };
+export { applyTimeFilter };

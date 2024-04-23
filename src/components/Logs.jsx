@@ -3,25 +3,24 @@ import { getLogsData } from "../services/socDataService";
 import { useSearchParams } from "react-router-dom";
 import Log from "./Log";
 import Header from "./Header";
+import { useFilter } from "./FilterContext";
 
 const LogsComponent = () => {
   const [searchParams] = useSearchParams();
   const [data, setData] = useState();
-  const [filter, setFilter] = useState();
+  const { timeFilter } = useFilter();
 
   const service = searchParams.get("service");
   const logsName = searchParams.get("logs-name");
-  const timePeriod = searchParams.get("time");
 
-  if(timePeriod){
-    setFilter(timePeriod)
-  }
+  console.log(timeFilter);
 
   useEffect(() => {
-    getLogsData(service, logsName, timePeriod).then((res) => {
+    getLogsData(service, logsName, timeFilter).then((res) => {
       setData(res);
     });
-  }, [service, logsName, timePeriod]);
+    
+  }, [service, logsName, timeFilter]);
 
   let listItems;
 
@@ -43,15 +42,9 @@ const LogsComponent = () => {
     return fStr;
   };
 
-  console.log(data);
-
-  const handleOnChange = (option) => {
-    console.log(option);
-  };
-
   return (
     <div>
-      <Header handleChange={handleOnChange} />
+      <Header/>
       <h2 className="main-heading">{formatString(logsName)} logs</h2>
       <ul>{listItems}</ul>
     </div>

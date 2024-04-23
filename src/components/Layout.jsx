@@ -1,17 +1,14 @@
-import { useState } from "react";
 import Header from "./Header";
 import ServerData from "./serverCharts/ServerData";
 import FirewallActionPieChart from "./firewallCharts/FirewallActionPieChart";
+import { useFilter } from "./FilterContext";
 
 const Layout = () => {
-  const [timeFilter, setTimeFilter] = useState("hour");
+  const { timeFilter} = useFilter()
 
-  const handleOnChange = (time) => {
-    setTimeFilter(time);
-  };
   return (
     <div>
-      <Header handleChange={handleOnChange} />
+      <Header/>
       <ServerData filter={timeFilter} />
       <FirewallActionPieChart />
     </div>

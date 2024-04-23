@@ -3,9 +3,10 @@ import {
   createHashRouter,
   createRoutesFromElements,
   RouterProvider,
-} from 'react-router-dom';
-import Layout from './components/Layout';
-import LogsComponent from './components/Logs';
+} from "react-router-dom";
+import { FilterProvider } from "./components/FilterContext";
+import Layout from "./components/Layout";
+import LogsComponent from "./components/Logs";
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -19,7 +20,12 @@ const router = createHashRouter(
 const App = () => {
   return (
     <>
-      <RouterProvider router={router} />
+      <FilterProvider>
+        <RouterProvider router={router}>
+          <Layout />
+          <LogsComponent />
+        </RouterProvider>
+      </FilterProvider>
     </>
   );
 };
