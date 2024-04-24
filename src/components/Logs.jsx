@@ -1,44 +1,38 @@
 import { useEffect, useState } from "react";
 import { getLogsData } from "../services/socDataService";
 import { useSearchParams } from "react-router-dom";
-import Log from "./Log";
-import Header from "./Header";
+import LogRecord from "./LogRecord";
 import { useFilter } from "./FilterContext";
 
 const LogsComponent = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [data, setData] = useState();
-  const { timeFilter, setTimeFilter } = useFilter();
+  const { timeFilter } = useFilter();
 
   const service = searchParams.get("service");
   const logsName = searchParams.get("logs-name");
 
-  console.log(timeFilter);
-
   useEffect(() => {
     getLogsData(service, logsName, timeFilter).then((res) => {
       setData(res);
+      searchParams.set('time', timeFilter)
+      setSearchParams(searchParams)
     });
-    
-  }, [service, logsName, timeFilter]);
+  }, [service, logsName, timeFilter, searchParams, setSearchParams]);
 
   let listItems;
 
   if (data) {
     listItems = data.map((logItem) => {
-        return(
-        <Log
+      return (
+        <LogRecord
           key={logItem.timestamp}
           log={logItem}
           serviceType={service}
           logsName={logsName}
-        />)
+        />
+      );
     });
-  
-  }
-
-  const handleChange = (time) =>{
-    setTimeFilter(time)
   }
 
   const formatString = (val) => {

@@ -40,8 +40,7 @@ const LoginAttemptsChart = (props) => {
   }, 0);
 
   const showLogs = () => {
-    // navigate(`/logs?service=server&logs-name=login-attempts&time=${time}`);
-    navigate(`/logs?service=server&logs-name=login-attempts`);
+    navigate(`/logs?service=server&logs-name=login-attempts&time=${time}`);
   };
 
   return (

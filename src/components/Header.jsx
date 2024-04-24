@@ -5,7 +5,6 @@ const Header = ({onChange}) => {
 const { timeFilter } = useFilter();
 
 const handleOnChange = (filter) => {
-    // setTimeFilter(filter);
     onChange(filter)
   };
     return(
