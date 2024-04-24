@@ -1,6 +1,6 @@
-import { ResponsivePie } from '@nivo/pie';
-import AdditionalInfo from '../additionalInfoComponent';
-import { useNavigate } from 'react-router-dom';
+import { ResponsivePie } from "@nivo/pie";
+import AdditionalInfo from "../AdditionalInfo";
+import { useNavigate } from "react-router-dom";
 
 const EventsDistribution = ({ events }) => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const EventsDistribution = ({ events }) => {
 
   const handleShowLogs = () => {
     navigate(
-      '/logs?service=firewall&logs-name=firewall-distribution&time=5min'
+      "/logs?service=firewall&logs-name=firewall-distribution&time=5min"
     );
   };
 

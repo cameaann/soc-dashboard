@@ -1,9 +1,18 @@
-import axios from 'axios'
-import { DATA_URL } from '../../constants'
+import { getFirewallData } from './socDataService'
 
-const firewallDataUrl = `${DATA_URL}/palomuuri`
-
-export const getFirewallData = async () => {
-  const response = await axios.get(firewallDataUrl);
-  return response.data;
+const getEventDistribution = () =>{
+  const eventDistData = getFirewallData().then((result) => {
+    const grouped = Object.groupBy(result, ({ action }) => action);
+    const data = Object.keys(grouped).map((item) => {
+      return {
+        id: item,
+        label: item,
+        value: grouped[item].length,
+      };
+    });
+    return data;
+  })
+  return eventDistData;
 }
+
+export default { getEventDistribution }

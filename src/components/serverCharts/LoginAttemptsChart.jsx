@@ -2,18 +2,20 @@ import { ResponsiveBar } from "@nivo/bar";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import serverDataService from "../../services/serverDataService";
-import AdditionalInfo from "../additionalInfoComponent";
+import AdditionalInfo from "../AdditionalInfo";
 
-const LoginAttemptsChart = ({time}) => {
+
+const LoginAttemptsChart = (props) => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
-  console.log(time);
+
+  const { time } = { ...props };
 
   useEffect(() => {
-    serverDataService.getLoginAttempts().then((res) => {
+    serverDataService.getLoginAttempts(time).then((res) => {
       setData(res);
     });
-  }, []);
+  }, [time]);
 
   const theme = {
     axis: {
@@ -32,15 +34,14 @@ const LoginAttemptsChart = ({time}) => {
     },
   };
 
-  console.log(data);
-
   const totalAttempts = data.reduce((sum, x) => {
     sum += x.failed + x.successed;
     return sum;
   }, 0);
 
   const showLogs = () => {
-    navigate("/logs?service=server&logs-name=login-attempts&time=5min");
+    // navigate(`/logs?service=server&logs-name=login-attempts&time=${time}`);
+    navigate(`/logs?service=server&logs-name=login-attempts`);
   };
 
   return (
@@ -58,10 +59,7 @@ const LoginAttemptsChart = ({time}) => {
           valueScale={{ type: "linear" }}
           indexScale={{ type: "band", round: true }}
           colors={["#694BDB", "#FF7777"]}
-          // borderColor={"#FFFFFF"}
           borderColor={{ from: "color", modifiers: [["darker", 0.6]] }}
-          axisTop={null}
-          axisRight={null}
           axisBottom={{
             tickSize: 5,
             tickPadding: 5,
@@ -104,8 +102,7 @@ const LoginAttemptsChart = ({time}) => {
               ],
             },
           ]}
-          role="application"
-          ariaLabel="Nivo bar chart demo"
+
           barAriaLabel={(e) =>
             `${e.id}: Successed - ${e.data.successed}, Failed - ${e.data.failed}`
           }

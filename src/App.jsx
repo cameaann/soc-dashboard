@@ -1,27 +1,33 @@
 import {
+  HashRouter,
   Route,
-  createHashRouter,
-  createRoutesFromElements,
-  RouterProvider,
-} from 'react-router-dom';
-import Layout from './components/layoutComponent';
-import LogsComponent from './components/logsComponent';
+  Routes
+  // createHashRouter,
+  // createRoutesFromElements,
+  // RouterProvider,
+} from "react-router-dom";
+import { FilterProvider } from "./components/FilterContext";
+import Layout from "./components/Layout";
+import LogsComponent from "./components/Logs";
+import Dashboard from "./components/Dashboard";
 
-const router = createHashRouter(
-  createRoutesFromElements(
-    <Route>
-      <Route exact path="/" element={<Layout />} />
-      <Route path="/logs" element={<LogsComponent />} />
-    </Route>
-  )
-);
 
 const App = () => {
   return (
     <>
-      <RouterProvider router={router} />
+      <FilterProvider>
+        <HashRouter>
+          <Layout>
+            <Routes>
+              <Route exact path="/" element={<Dashboard />} />
+              <Route path="/logs" element={<LogsComponent />} />
+            </Routes>
+          </Layout>
+        </HashRouter>
+      </FilterProvider>
     </>
   );
 };
+
 
 export default App;
