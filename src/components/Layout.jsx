@@ -1,16 +1,16 @@
 import Header from "./Header";
 import ServerData from "./serverCharts/ServerData";
-import FirewallActionPieChart from "./firewallCharts/FirewallActionPieChart";
+import FirewallData from "./firewallCharts/FirewallData";
 import { useFilter } from "./FilterContext";
 
 const Layout = () => {
-  const { timeFilter} = useFilter()
+  const { timeFilter } = useFilter();
 
   return (
     <div>
-      <Header/>
+      <Header />
       <ServerData filter={timeFilter} />
-      <FirewallActionPieChart />
+      <FirewallData />
     </div>
   );
 };
