@@ -1,10 +1,8 @@
 import Header from "./Header";
-import ServerData from "./serverCharts/ServerData";
-import FirewallData from "./firewallCharts/FirewallData";
 import { useFilter } from "./FilterContext";
 
-const Layout = () => {
-  const { timeFilter, setTimeFilter } = useFilter();
+const Layout = ({children}) => {
+  const { setTimeFilter } = useFilter();
 
   const handleChange = (time) => {
     setTimeFilter(time)
@@ -13,8 +11,7 @@ const Layout = () => {
   return (
     <div>
       <Header onChange={handleChange}/>
-      <ServerData filter={timeFilter} />
-      <FirewallData />
+      <div className="content">{children}</div>
     </div>
   );
 };

@@ -48,7 +48,6 @@ const LogsComponent = () => {
 
   return (
     <div>
-      <Header onChange = {handleChange}/>
       <h2 className="main-heading">{formatString(logsName)} logs</h2>
       <ul>{listItems}</ul>
     </div>
