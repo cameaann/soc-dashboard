@@ -8,7 +8,7 @@ import { useFilter } from "./FilterContext";
 const LogsComponent = () => {
   const [searchParams] = useSearchParams();
   const [data, setData] = useState();
-  const { timeFilter } = useFilter();
+  const { timeFilter, setTimeFilter } = useFilter();
 
   const service = searchParams.get("service");
   const logsName = searchParams.get("logs-name");
@@ -37,6 +37,10 @@ const LogsComponent = () => {
   
   }
 
+  const handleChange = (time) =>{
+    setTimeFilter(time)
+  }
+
   const formatString = (val) => {
     let fStr = val.split("-").join(" ");
     return fStr;
@@ -44,7 +48,7 @@ const LogsComponent = () => {
 
   return (
     <div>
-      <Header/>
+      <Header onChange = {handleChange}/>
       <h2 className="main-heading">{formatString(logsName)} logs</h2>
       <ul>{listItems}</ul>
     </div>

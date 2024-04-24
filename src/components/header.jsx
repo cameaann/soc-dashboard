@@ -1,11 +1,12 @@
 import Filter from "./Filter";
 import { useFilter } from "./FilterContext";
 
-const Header = () => {
-const { timeFilter, setTimeFilter } = useFilter();
+const Header = ({onChange}) => {
+const { timeFilter } = useFilter();
 
 const handleOnChange = (filter) => {
-    setTimeFilter(filter);
+    // setTimeFilter(filter);
+    onChange(filter)
   };
     return(
         <div className="header">
