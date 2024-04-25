@@ -1,37 +1,38 @@
-import { ResponsiveBar } from "@nivo/bar";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import serverDataService from "../../services/serverDataService";
+import { ResponsiveBar } from "@nivo/bar";
 import AdditionalInfo from "../AdditionalInfo";
 import { THEME } from "../../../constants";
 
-
-const LoginAttemptsChart = (props) => {
+const SystemUpdatesChart = (props) => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
 
   const { time } = { ...props };
 
+  console.log(time);
+
   useEffect(() => {
-    serverDataService.getLoginAttempts(time).then((res) => {
+    serverDataService.getSystemUpdates(time).then((res) => {
       setData(res);
     });
   }, [time]);
+
+  const showLogs = () => {
+    navigate(`/logs?service=server&logs-name=updates`);
+  };
 
   const totalAttempts = data.reduce((sum, x) => {
     sum += x.failed + x.successed;
     return sum;
   }, 0);
 
-  const showLogs = () => {
-    navigate(`/logs?service=server&logs-name=login-attempts`);
-
-  };
-
-  return (
+  console.log(data);
+  return(
     <div className="chart-container">
       <div className="chart">
-        <h4 className="chart-heading">Login attempts</h4>
+        <h4 className="chart-heading">System Update attempts</h4>
         <ResponsiveBar
           theme={THEME}
           data={data}
@@ -92,9 +93,9 @@ const LoginAttemptsChart = (props) => {
           }
         />
       </div>
-      <AdditionalInfo onShowLogs={showLogs} totalNumber={totalAttempts} text={"Total login attemps"} />
+      <AdditionalInfo onShowLogs={showLogs} totalNumber={totalAttempts} text={"Total updates"}/>
     </div>
   );
 };
 
-export default LoginAttemptsChart;
+export default SystemUpdatesChart;

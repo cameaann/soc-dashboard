@@ -26,7 +26,7 @@ const EventsDistribution = ({ events }) => {
           />
         </div>
       </div>
-      <AdditionalInfo onShowLogs={handleShowLogs} totalNumber={total} />
+      <AdditionalInfo onShowLogs={handleShowLogs} totalNumber={total} text={"Total events"} />
     </div>
   );
 };
