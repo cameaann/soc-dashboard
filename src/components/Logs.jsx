@@ -5,7 +5,7 @@ import LogRecord from "./LogRecord";
 import { useFilter } from "./FilterContext";
 
 const LogsComponent = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [data, setData] = useState();
   const { timeFilter } = useFilter();
 
@@ -15,10 +15,9 @@ const LogsComponent = () => {
   useEffect(() => {
     getLogsData(service, logsName, timeFilter).then((res) => {
       setData(res);
-      searchParams.set('time', timeFilter)
-      setSearchParams(searchParams)
+  
     });
-  }, [service, logsName, timeFilter, searchParams, setSearchParams]);
+  }, [service, logsName, timeFilter]);
 
   let listItems;
 
