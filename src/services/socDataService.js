@@ -27,9 +27,11 @@ const getLogsData = async (info, data, timePeriod) => {
     
     if (data === 'login-attempts') {
       let loginAttempts = filteredByTimeData.filter(x => x.event_type === 'login')
-      // console.log('loginAttempts', loginAttempts);
-
       return loginAttempts;
+    }
+    if(data === 'updates'){
+      let updateAttempts = filteredByTimeData.filter(x => x.event_type === 'update')
+      return updateAttempts;
     }
   }
   if (info === 'firewall') {

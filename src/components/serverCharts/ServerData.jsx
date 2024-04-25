@@ -1,11 +1,15 @@
 import LoginAttemptsChart from "./LoginAttemptsChart";
+import SystemUpdatesChart from "./SystemUpdatesChart";
 
 const ServerData = ({ filter }) => {
-
+  console.log(filter);
   return (
     <div className="component-container">
       <h3>Palvelimet</h3>
-      <LoginAttemptsChart time={filter} />
+      <div className="general-charts-container">
+        <LoginAttemptsChart time={filter} />
+        <SystemUpdatesChart time={filter} />
+      </div>
     </div>
   );
 };

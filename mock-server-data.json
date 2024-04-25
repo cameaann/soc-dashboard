@@ -658,5 +658,1986 @@
         "server_name": "server2",
         "event_type": "virus_scan",
         "status": "success"
+    },
+    {
+        "timestamp": "2024-03-18T10:00:00",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-03-18T10:15:00",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-03-18T11:30:00",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch20240318",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-03-18T12:00:00",
+        "server_name": "server3",
+        "event_type": "update",
+        "update_name": "AppUpdate_v2.5",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-03-18T14:00:00",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-03-18T15:00:00",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:02:43.171Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:02:43.177Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:02:58.483Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:03:00.720Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:03:00.978Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:03:01.511Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:03:21.555Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:03:23.390Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:03:27.645Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:03:36.872Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:03:50.730Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:10.720Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:20.742Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:32.360Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:32.360Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:34.066Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:34.114Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:36.352Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:52.602Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:52.638Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:52.924Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:04:53.781Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:05:06.124Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:06:51.605Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:00.389Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:07.778Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:16.252Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:18.173Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:21.996Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:23.839Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:26.172Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:27.593Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:29.320Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:31.885Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:07:34.942Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:09:06.812Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:09:45.540Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:10:02.048Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:10:04.164Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:10:06.843Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:10:10.745Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:10:13.168Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:10:26.526Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:10:37.900Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:10:41.157Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:11:50.070Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:11:59.788Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:00.211Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:02.743Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:04.019Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:05.512Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:12.944Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:14.722Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:18.657Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:20.506Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:26.922Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:28.204Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:29.145Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:31.103Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:37.266Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:39.649Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:41.315Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:43.208Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:44.083Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:45.017Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:12:59.018Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:08.780Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:14.522Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:34.330Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:43.895Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:53.663Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:56.026Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:56.786Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:57.568Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:13:59.719Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:14:14.359Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:14:51.220Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:04.142Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:04.143Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:04.144Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:04.144Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:15.821Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:15.822Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:15.823Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:15.824Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:16.235Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:35.149Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:35.150Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:38.253Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:38.254Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:38.255Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:16:38.255Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:26.913Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:26.914Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:28.349Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:28.400Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:32.140Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:32.141Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:33.418Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:33.467Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:37.648Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:37.649Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:37.650Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:18:37.650Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:16.127Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:16.128Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:16.129Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:16.130Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:39.336Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:39.336Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:40.561Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:40.562Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:41.522Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:41.523Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:43.526Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:43.578Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:44.342Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:19:44.394Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:20:33.221Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:20:35.155Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:40.681Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:48.454Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:48.454Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:51.470Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:51.472Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:56.440Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:56.440Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:56.442Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:21:56.443Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:15.022Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:15.023Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:16.603Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:16.603Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:17.024Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:17.072Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:18.706Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:18.706Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:22.320Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:22.320Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:22.996Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:24.927Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:27.009Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:27.010Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:27.683Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:27.734Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:54.625Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:54.626Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:54.627Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:22:54.628Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:16.254Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:16.259Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:25.970Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:25.971Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:30.655Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:30.657Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:31.289Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:31.290Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:33.539Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:33.592Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:34.341Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:34.723Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:34.776Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:36.130Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:42.939Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:42.940Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:49.329Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:49.493Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:49.494Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:49.495Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:23:49.495Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:01.119Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:07.095Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:31.541Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:32.926Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:32.927Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:39.119Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:39.120Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:39.121Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:39.122Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:24:53.781Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:25:41.509Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:25:45.591Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:25:50.681Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:27:03.802Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:27:16.407Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:27:22.550Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:27:22.551Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:27:22.551Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:27:22.552Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:27:28.246Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:27:39.191Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:30:11.105Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:30:11.106Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:30:46.803Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:30:46.805Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:30:46.806Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:30:46.806Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:31:21.774Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:32:08.115Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:32:11.289Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:33:56.551Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:33:59.782Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:19.666Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:19.667Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:42.615Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:42.616Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:45.182Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:55.426Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:55.427Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:55.428Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:35:55.429Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:26.250Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:26.251Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:26.252Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:26.252Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:31.370Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:31.371Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:38.308Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:38.309Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:43.200Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:43.253Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:43.254Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:36:43.254Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:37:43.844Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:37:43.846Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:37:44.543Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:37:44.597Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:37:50.052Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:37:50.054Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:37:50.056Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:37:50.057Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:02.434Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:02.435Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:08.609Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:08.610Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:11.630Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:11.681Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:19.468Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:19.469Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:20.446Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:20.448Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:28.161Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:28.166Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:28.167Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:38:28.168Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:39:48.035Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:39:53.421Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:39:53.422Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:39:53.423Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:39:53.424Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:39:55.989Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:16.940Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:16.942Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:16.943Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:16.943Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:31.094Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:31.096Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:31.097Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:31.098Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:51.536Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:51.537Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:51.538Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:41:51.538Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:42:51.170Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:26.145Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:26.145Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:28.246Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:28.808Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:28.862Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:30.704Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:30.759Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:30.760Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:30.760Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:32.801Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:32.802Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:35.624Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:35.625Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:37.495Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:37.547Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:50.508Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:50.509Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:50.510Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:43:50.512Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:34.240Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:50.520Z",
+        "server_name": "server2",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:50.522Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:50.523Z",
+        "server_name": "server1",
+        "event_type": "abnormal_activity",
+        "description": "Unusual number of failed login attempts"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:50.524Z",
+        "server_name": "server1",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:55.850Z",
+        "server_name": "server1",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:55.851Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:55.852Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:55.853Z",
+        "server_name": "server2",
+        "event_type": "update",
+        "update_name": "SecurityPatch30342345",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:59.207Z",
+        "server_name": "server1",
+        "event_type": "login",
+        "username": "user123",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:59.208Z",
+        "server_name": "server2",
+        "event_type": "virus_scan",
+        "status": "success"
+    },
+    {
+        "timestamp": "2024-04-25T09:44:59.209Z",
+        "server_name": "server2",
+        "event_type": "login",
+        "username": "admin",
+        "status": "failed"
     }
 ]
