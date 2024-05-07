@@ -5,17 +5,22 @@ import serverDataService from "../../services/serverDataService";
 import AdditionalInfo from "../AdditionalInfo";
 import { THEME } from "../../../constants";
 
-
 const LoginAttemptsChart = (props) => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   const { time } = { ...props };
 
   useEffect(() => {
-    serverDataService.getLoginAttempts(time).then((res) => {
-      setData(res);
-    });
+    try {
+      serverDataService.getLoginAttempts(time).then((res) => {
+        setData(res);
+        setLoading(false);
+      });
+    } catch (error) {
+      console.error();
+    }
   }, [time]);
 
   const totalAttempts = data.reduce((sum, x) => {
@@ -25,12 +30,12 @@ const LoginAttemptsChart = (props) => {
 
   const showLogs = () => {
     navigate(`/logs?service=server&logs-name=login-attempts`);
-
   };
 
   return (
     <div className="chart-container">
-      <div className="chart">
+      {loading && (<span className="loader"></span>)}
+      <div className="chart" onClick={showLogs}>
         <h4 className="chart-heading">Login attempts</h4>
         <ResponsiveBar
           theme={THEME}
@@ -86,13 +91,16 @@ const LoginAttemptsChart = (props) => {
               ],
             },
           ]}
-
           barAriaLabel={(e) =>
             `${e.id}: Successed - ${e.data.successed}, Failed - ${e.data.failed}`
           }
         />
       </div>
-      <AdditionalInfo onShowLogs={showLogs} totalNumber={totalAttempts} text={"Total login attemps"} />
+      <AdditionalInfo
+        onShowLogs={showLogs}
+        totalNumber={totalAttempts}
+        text={"Total login attemps"}
+      />
     </div>
   );
 };

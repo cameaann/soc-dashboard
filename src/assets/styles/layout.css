@@ -11,6 +11,7 @@ html {
     --textHighLight1:#94d5f1;
     --textHighLight2:#FCE0D1;
     --textHighLight3:#e6aacb;
+    --borderColor:rgb(252, 224, 209, .5);
   }
   /* #69023B */
   body{
@@ -31,9 +32,12 @@ html {
 }
 .general-charts-container{
   display: flex;
+  justify-content: center;
+  gap:5rem;
 }
 
 .chart-container {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -42,7 +46,13 @@ html {
   width: 40rem;
   height: 30rem;
   margin-inline-start: 4rem;
+  position: relative;
 }
+
+/* .chart.pie-chart>div{
+  height:30rem;
+} */
+
 
 .chart-heading {
   margin-block-end: -2rem;
@@ -57,7 +67,9 @@ html {
 
 /* Additional information component */
 .additionInfo-container {
-  /* margin-inline-start: -8rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .additionInfo {
   display: flex;
@@ -147,3 +159,154 @@ html {
     font-family: inherit;
   }
 
+  .loader {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 5px solid #f5ecec;
+    border-bottom-color: #0048ff;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    align-self: center;
+    left:35%;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+   
+    .general-charts-container{
+      display: flex;
+      justify-content: flex-start;
+      gap:0rem;
+    }
+    .chart{
+      width:30rem;
+    }
+ 
+
+  }
+
+  
+  @media only screen and (max-width: 768px) {
+   
+    .general-charts-container{
+      flex-direction: column;
+
+    }
+    .chart-container{
+      justify-content: center;
+      gap:5rem;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 601px) {
+    .header{
+      flex-direction: column;
+      justify-content: left;
+      margin-block-end: 1rem;
+      align-items: start;
+    }
+    .header>div{
+      width: 100%;
+    }
+    .header>h2{
+      text-align: left
+    }
+    select.filter{
+      width:100%;
+    }
+
+    .general-charts-container{
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    .chart{
+      width: 34rem;
+      margin-inline-start: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-block-start: 2rem;
+    }
+ 
+    .chart:hover{
+      cursor: pointer;
+    }
+    .chart>div{
+      width:100%;
+    }
+    .chart-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    .chart-container:not(:last-child){
+      border-bottom: 1px solid var(--borderColor);
+
+    }
+    .chart.pie {
+      margin-block-start: -4rem;
+    }
+
+    .additionInfo-container{
+      width:50%;
+      
+    }
+    .additionInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-block-end: 1rem;
+      width: 100%;
+      
+    }
+
+    .totalNumberInfo {
+      width: 5rem;
+      height: 5rem;
+      font-size: 3rem;
+      margin: 0;
+      align-items: center;
+      background-color: transparent;
+      color:var(--textColor)
+    }
+
+    .show-btn{
+      display: none;
+    }
+
+    .loader {
+      top: 20rem;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .component-container{
+      border-right: none;
+      border-left: none;
+    }
+    .chart{
+      width:20rem;
+    }
+    .chart.pie{
+      width:100%;
+    }
+    .additionInfo-container{
+      width:60%;
+    }
+  }

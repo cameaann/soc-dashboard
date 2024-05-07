@@ -14,7 +14,10 @@ const FirewallData = () => {
   return (
     <div className="component-container">
       <h3>Palomuuri</h3>
-      <EventsDistribution events={events} />
+      <div className="general-charts-container">
+        <EventsDistribution events={events} />
+        <EventsDistribution events={events} />
+      </div>
     </div>
   );
 };

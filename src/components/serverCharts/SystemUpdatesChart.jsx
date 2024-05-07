@@ -7,6 +7,7 @@ import { THEME } from "../../../constants";
 
 const SystemUpdatesChart = (props) => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   const { time } = { ...props };
@@ -14,9 +15,14 @@ const SystemUpdatesChart = (props) => {
   console.log(time);
 
   useEffect(() => {
-    serverDataService.getSystemUpdates(time).then((res) => {
-      setData(res);
-    });
+    try {
+      serverDataService.getSystemUpdates(time).then((res) => {
+        setData(res);
+        setLoading(false);
+      });
+    } catch (error) {
+      console.error();
+    }
   }, [time]);
 
   const showLogs = () => {
@@ -29,9 +35,10 @@ const SystemUpdatesChart = (props) => {
   }, 0);
 
   console.log(data);
-  return(
+  return (
     <div className="chart-container">
-      <div className="chart">
+      {loading && <span className="loader"></span>}
+      <div className="chart" onClick={showLogs}>
         <h4 className="chart-heading">System Update attempts</h4>
         <ResponsiveBar
           theme={THEME}
@@ -87,13 +94,16 @@ const SystemUpdatesChart = (props) => {
               ],
             },
           ]}
-
           barAriaLabel={(e) =>
             `${e.id}: Successed - ${e.data.successed}, Failed - ${e.data.failed}`
           }
         />
       </div>
-      <AdditionalInfo onShowLogs={showLogs} totalNumber={totalAttempts} text={"Total updates"}/>
+      <AdditionalInfo
+        onShowLogs={showLogs}
+        totalNumber={totalAttempts}
+        text={"Total updates"}
+      />
     </div>
   );
 };
