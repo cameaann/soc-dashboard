@@ -301,10 +301,13 @@ html {
       border-left: none;
     }
     .chart{
-      width:20rem;
+      width:25rem;
     }
     .chart.pie{
       width:100%;
+    }
+    .chart.pie>.chart-heading{
+      margin-inline-start: 5rem;
     }
     .additionInfo-container{
       width:60%;
