@@ -130,18 +130,16 @@ rect:hover{
     font-family: "Gotham", sans-serif;
     line-height: 1.5;
   }
-  .user{
+  .pink{
     color: var(--textHighLight2);
   }
-  .service{
+  .blue{
     color: var(--textHighLight1);
   }
-  .date{
+  .red{
     color: var(--textHighLight3)
   }
-  .time{
-    color: var(--textHighLight3);
-  }
+
 
 
   /* FILTER COMPONENT */

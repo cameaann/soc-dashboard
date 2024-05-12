@@ -22,8 +22,8 @@ const EventsDistribution = ({ events }) => {
           <ResponsivePie
             theme={THEME}
             margin={{ top: 20, right: 10, bottom: 20, left: 0 }}
-            arcLinkLabelsDiagonalLength={12}
-            arcLinkLabelsStraightLength={10}
+            arcLinkLabelsDiagonalLength={13}
+            arcLinkLabelsStraightLength={13}
             padding={0.3}
             data={events}
             arcLinkLabelsSkipAngle={10}

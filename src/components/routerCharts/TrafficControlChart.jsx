@@ -57,8 +57,8 @@ const TrafficControlChart = (props) => {
             arcLinkLabelsTextOffset={8}
             arcLinkLabelsTextColor="#FFFFFF"
             arcLinkLabelsOffset={-8}
-            arcLinkLabelsDiagonalLength={12}
-            arcLinkLabelsStraightLength={10}
+            arcLinkLabelsDiagonalLength={13}
+            arcLinkLabelsStraightLength={13}
             arcLinkLabelsThickness={2}
             arcLinkLabelsColor={{ from: "color" }}
             arcLabelsSkipAngle={10}

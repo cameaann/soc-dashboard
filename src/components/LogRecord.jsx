@@ -7,11 +7,11 @@ const LogRecord = ({ log, serviceType, logsName }) => {
   if (serviceType === "server" && logsName === "login-attempts") {
     return (
       <li className="log">
-        Käyttäjä <span className="user">{log.username}</span> kirjautui
-        palvelimelle <span className="service">{log.server_name}</span>
+        Käyttäjä <span className="pink">{log.username}</span> kirjautui
+        palvelimelle <span className="blue">{log.server_name}</span>
         {log.status === "success" ? " onnistuneesti" : " epäonnistuneesti"}{" "}
-        <span className="date"> {date} </span>klo{" "}
-        <span className="time">{time}</span>
+        <span className="red"> {date} </span>klo{" "}
+        <span className="red">{time}</span>
       </li>
     );
   }
@@ -20,25 +20,25 @@ const LogRecord = ({ log, serviceType, logsName }) => {
       <li className="log">
         Palvelimella {log.server_name} asennettiin päivitys {log.update_name}
         {log.status === "success" ? " onnistuneesti" : " epäonnistuneesti"}{" "}
-        <span className="date"> {date} </span>klo {time}
+        <span className="red"> {date} </span>klo {time}
       </li>
     );
   }
   if (serviceType === "firewall" && logsName === "firewall-distribution") {
     return (
       <li className="log">
-        Palamuuri {formatRouterTrafficlog(log.action)} yhteydenoton IP-osoitteesta {log.destination_ip}{" "}
+        Palamuuri <span className="blue">{formatRouterTrafficlog(log.action)}</span>  yhteydenoton IP-osoitteesta {log.destination_ip}{" "}
         porttiin {log.destination_port} ({log.protocol}){" "}
-        <span className="date"> {date} </span>klo {time}
+        <span className="red"> {date} </span>klo {time}
       </li>
     );
   }
   if (serviceType === "router" && logsName === "trafficControl") {
     return (
       <li className="log">
-        Reititin {formatRouterTrafficlog(log.action)} liikennettä IP-osoitteesta {log.source_ip}{" "}
+        Reititin <span className="blue">{formatRouterTrafficlog(log.action)} </span>liikennettä IP-osoitteesta <span className="pink">{log.source_ip}</span>{" "}
         verkkoosoitteeseen {log.destination_ip} ({log.protocol}){" "}
-        <span className="date"> {date} </span>klo {time}
+        <span className="red"> {date} </span>klo {time}
       </li>
     );
   }
