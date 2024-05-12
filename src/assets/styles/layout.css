@@ -53,7 +53,9 @@ html {
   height:30rem;
 } */
 
-
+rect:hover{
+  color: black;
+}
 .chart-heading {
   margin-block-end: -2rem;
   margin-inline-start: 2rem;
@@ -181,6 +183,11 @@ html {
       transform: rotate(360deg);
     }
   }
+  .chart>div>div>svg>rect:hover{
+    color:#69013B;
+  }
+
+
   @media only screen and (max-width: 1024px) {
    
     .general-charts-container{
@@ -189,7 +196,8 @@ html {
       gap:0rem;
     }
     .chart{
-      width:30rem;
+      width: 33rem;
+      margin-inline-start: 0rem;
     }
  
 
@@ -252,7 +260,7 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+      gap:.5rem;
     }
     .chart-container:not(:last-child){
       border-bottom: 1px solid var(--borderColor);

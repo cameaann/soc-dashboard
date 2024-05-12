@@ -5,6 +5,7 @@ import { DATA_URL } from '../../constants';
 // const serverDataUrl = "./mock-server-data.json"
 const serverDataUrl = `${DATA_URL}/palvelin`;
 const firewallDataUrl = `${DATA_URL}/palomuuri`;
+const routerDataUrl = `${DATA_URL}/reititin`;
 
 const getServerData = async () => {
   const res = await axios.get(serverDataUrl);
@@ -15,6 +16,11 @@ const getFirewallData = async () => {
   const response = await axios.get(firewallDataUrl);
   return response.data;
 };
+
+const getRouterData = async () => {
+  const response = await axios.get(routerDataUrl);
+  return response.data;
+}
 
 
 const getLogsData = async (info, data, timePeriod) => {
@@ -42,4 +48,4 @@ const getLogsData = async (info, data, timePeriod) => {
   }
 };
 
-export { getServerData, getFirewallData, getLogsData };
+export { getServerData, getFirewallData, getLogsData, getRouterData };

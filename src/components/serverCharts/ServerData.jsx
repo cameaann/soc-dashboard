@@ -2,7 +2,7 @@ import LoginAttemptsChart from "./LoginAttemptsChart";
 import SystemUpdatesChart from "./SystemUpdatesChart";
 
 const ServerData = ({ filter }) => {
-  console.log(filter);
+
   return (
     <div className="component-container">
       <h3>Palvelimet</h3>
