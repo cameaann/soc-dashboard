@@ -27,7 +27,7 @@ const TrafficControlChart = (props) => {
   const totalTrafficEvents = data.reduce((acc, item) => acc + item.value, 0);
 
   const showLogs = () => {
-    navigate(`/logs?service=server&logs-name=trafficControl`);
+    navigate(`/logs?service=router&logs-name=trafficControl`);
   };
 
   console.log(data);

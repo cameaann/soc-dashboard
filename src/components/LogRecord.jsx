@@ -27,11 +27,35 @@ const LogRecord = ({ log, serviceType, logsName }) => {
   if (serviceType === "firewall" && logsName === "firewall-distribution") {
     return (
       <li className="log">
-        Palamuuri {log.action} yhteydenoton IP-osoitteesta {log.destination_ip}{" "}
+        Palamuuri {formatRouterTrafficlog(log.action)} yhteydenoton IP-osoitteesta {log.destination_ip}{" "}
         porttiin {log.destination_port} ({log.protocol}){" "}
         <span className="date"> {date} </span>klo {time}
       </li>
     );
   }
+  if (serviceType === "router" && logsName === "trafficControl") {
+    return (
+      <li className="log">
+        Reititin {formatRouterTrafficlog(log.action)} liikennettä IP-osoitteesta {log.source_ip}{" "}
+        verkkoosoitteeseen {log.destination_ip} ({log.protocol}){" "}
+        <span className="date"> {date} </span>klo {time}
+      </li>
+    );
+  }
 };
+
+const formatRouterTrafficlog = (str)=>{
+  if(str==="forwarded"){
+    return "ohjasi";
+  }
+  else if(str==="allowed"){
+    return "salli";
+  }
+  else if(str==="blocked"){
+    return "esti";
+  }
+  else if(str==="denied"){
+    return "kielsi"
+  }
+}
 export default LogRecord;
