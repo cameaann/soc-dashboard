@@ -1,14 +1,15 @@
 import ServerData from "./serverCharts/ServerData";
 import FirewallData from "./firewallCharts/FirewallData";
 import { useFilter } from "./FilterContext";
+import RouterData from "./routerCharts/RouterData";
 
 const Dashboard = () =>{
     const {timeFilter} = useFilter()
-    console.log(timeFilter);
     return (
         <div>
           <ServerData filter={timeFilter} />
           <FirewallData />
+          <RouterData filter={timeFilter}/>
         </div>
       );
     };

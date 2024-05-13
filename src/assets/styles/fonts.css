@@ -13,6 +13,34 @@
 }
 
 @font-face {
+  font-family: 'GothamMedium';
+  src: url('../fonts/Gotham/GothamMedium.eot');
+  src: url('../fonts/Gotham/GothamMedium.eot') format('embedded-opentype'),
+      url('../fonts/Gotham/GothamMedium.woff2') format('woff2'),
+      url('../fonts/Gotham/GothamMedium.woff') format('woff'),
+      url('../fonts/Gotham/GothamMedium.ttf') format('truetype'),
+      url('../fonts/Gotham/GothamMedium.svg')format("svg");
+  /* font-weight: 300; */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamBold';
+  src: url('../fonts/Gotham/GothamBold.eot');
+  src: url('../fonts/Gotham/GothamBold.eot') format('embedded-opentype'),
+      url('../fonts/Gotham/GothamBold.woff2') format('woff2'),
+      url('../fonts/Gotham/GothamBold.woff') format('woff'),
+      url('../fonts/Gotham/GothamBold.ttf') format('truetype'),
+      url('../fonts/Gotham/GothamBold.svg')format("svg");
+  /* font-weight: 300; */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
     font-family: 'Morion';
     src: url('../fonts/Morion/MorionRegular.eot');
     src: url('../fonts/Morion/MorionRegular.eot') format('embedded-opentype'),

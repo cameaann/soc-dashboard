@@ -12,8 +12,6 @@ const SystemUpdatesChart = (props) => {
 
   const { time } = { ...props };
 
-  console.log(time);
-
   useEffect(() => {
     try {
       serverDataService.getSystemUpdates(time).then((res) => {
@@ -34,7 +32,6 @@ const SystemUpdatesChart = (props) => {
     return sum;
   }, 0);
 
-  console.log(data);
   return (
     <div className="chart-container">
       {loading && <span className="loader"></span>}

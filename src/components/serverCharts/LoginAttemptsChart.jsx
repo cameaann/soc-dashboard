@@ -32,6 +32,7 @@ const LoginAttemptsChart = (props) => {
     navigate(`/logs?service=server&logs-name=login-attempts`);
   };
 
+  console.log(data);
   return (
     <div className="chart-container">
       {loading && (<span className="loader"></span>)}
@@ -51,17 +52,8 @@ const LoginAttemptsChart = (props) => {
           borderColor={{ from: "color", modifiers: [["darker", 0.6]] }}
           axisBottom={{
             tickSize: 5,
-            tickPadding: 5,
+            tickPadding: 8,
             tickRotation: 0,
-          }}
-          axisLeft={{
-            tickSize: 5,
-            tickPadding: 5,
-            tickRotation: 0,
-            legend: "",
-            legendPosition: "end",
-            legendOffset: -40,
-            truncateTickAt: 0,
           }}
           labelSkipWidth={12}
           labelSkipHeight={12}
@@ -92,7 +84,7 @@ const LoginAttemptsChart = (props) => {
             },
           ]}
           barAriaLabel={(e) =>
-            `${e.id}: Successed - ${e.data.successed}, Failed - ${e.data.failed}`
+            `Successed - ${e.data.successed}, Failed - ${e.data.failed}:${e.id} `
           }
         />
       </div>
