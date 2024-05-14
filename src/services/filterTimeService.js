@@ -2,6 +2,9 @@ import dayjs from "dayjs";
 
 const getStartTime = (timeString, currentTime) => {
   switch (timeString) {
+    case "minute":
+      return currentTime.subtract(1, "minute");
+
     case "hour":
       return currentTime.subtract(1, "hour");
 
@@ -9,14 +12,13 @@ const getStartTime = (timeString, currentTime) => {
       return currentTime.subtract(1, "day");
 
     case "week":
-      
       return currentTime.subtract(1, "week");
 
     case "month":
       return currentTime.subtract(1, "month");
 
     default:
-      throw new Error("Unexpected parameter")
+      throw new Error("Unexpected parameter");
   }
 };
 

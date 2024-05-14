@@ -23,8 +23,6 @@ const getRouterData = async () => {
 };
 
 const getLogsData = async (info, data, timePeriod) => {
-  console.log(info, data, timePeriod);
-
   if (info === "server") {
     const res = await axios.get(serverDataUrl);
 
@@ -45,9 +43,9 @@ const getLogsData = async (info, data, timePeriod) => {
   }
   if (info === "firewall") {
     const res = await axios.get(firewallDataUrl);
-    console.log(res.data);
+    const filteredByTimeData = applyTimeFilter(res.data, timePeriod);
 
-    return res.data;
+    return filteredByTimeData;
   }
   if (info === "router") {
     const res = await axios.get(routerDataUrl);

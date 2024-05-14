@@ -15,7 +15,6 @@ const TrafficControlChart = (props) => {
   useEffect(() => {
     try {
       routerDataService.getTrafficControlEvents(time).then((res) => {
-        console.log(res);
         setData(res);
         setLoading(false);
       });
@@ -29,8 +28,6 @@ const TrafficControlChart = (props) => {
   const showLogs = () => {
     navigate(`/logs?service=router&logs-name=trafficControl`);
   };
-
-  console.log(data);
 
   return (
     <div className="chart-container">

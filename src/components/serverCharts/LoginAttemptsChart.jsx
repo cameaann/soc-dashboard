@@ -32,10 +32,9 @@ const LoginAttemptsChart = (props) => {
     navigate(`/logs?service=server&logs-name=login-attempts`);
   };
 
-  console.log(data);
   return (
     <div className="chart-container">
-      {loading && (<span className="loader"></span>)}
+      {loading && <span className="loader"></span>}
       <div className="chart" onClick={showLogs}>
         <h4 className="chart-heading">Login attempts</h4>
         <ResponsiveBar

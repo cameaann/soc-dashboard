@@ -31,14 +31,12 @@ const getLoginAttempts = (time) => {
       .filter((emp) => emp.successed + emp.failed > 0)
       .sort(byServer);
 
-
     return loginAttempts;
   });
   return data;
 };
 
 const getSystemUpdates = (time) => {
-
   const data = getServerData().then((res) => {
     const filteredByTimeData = applyTimeFilter(res, time);
 
@@ -46,8 +44,6 @@ const getSystemUpdates = (time) => {
       filteredByTimeData,
       ({ server_name }) => server_name
     );
-
-    console.log(groupedArray);
 
     let updateAttempts = Object.entries(groupedArray)
       .map(([server, events]) => {
@@ -69,20 +65,16 @@ const getSystemUpdates = (time) => {
       })
       .filter((emp) => emp.successed + emp.failed > 0)
       .sort(byServer);
-
-
-      console.log(updateAttempts);
     return updateAttempts;
   });
   return data;
 };
 
-
-function byServer( a, b ) {
-  if (a.server < b.server){
+function byServer(a, b) {
+  if (a.server < b.server) {
     return -1;
   }
-  if ( a.server > b.server ){
+  if (a.server > b.server) {
     return 1;
   }
   return 0;
