@@ -27,8 +27,10 @@ const LogRecord = ({ log, serviceType, logsName }) => {
   if (serviceType === "firewall" && logsName === "firewall-distribution") {
     return (
       <li className="log">
-        Palamuuri <span className="blue">{formatRouterTrafficlog(log.action)}</span>  yhteydenoton IP-osoitteesta {log.destination_ip}{" "}
-        porttiin {log.destination_port} ({log.protocol}){" "}
+        Palamuuri{" "}
+        <span className="blue">{formatRouterTrafficlog(log.action)}</span>{" "}
+        yhteydenoton IP-osoitteesta {log.destination_ip} porttiin{" "}
+        {log.destination_port} ({log.protocol}){" "}
         <span className="red"> {date} </span>klo {time}
       </li>
     );
@@ -36,26 +38,36 @@ const LogRecord = ({ log, serviceType, logsName }) => {
   if (serviceType === "router" && logsName === "trafficControl") {
     return (
       <li className="log">
-        Reititin <span className="blue">{formatRouterTrafficlog(log.action)} </span>liikennettä IP-osoitteesta <span className="pink">{log.source_ip}</span>{" "}
+        Reititin{" "}
+        <span className="blue">{formatRouterTrafficlog(log.action)} </span>
+        liikennettä IP-osoitteesta <span className="pink">
+          {log.source_ip}
+        </span>{" "}
         verkkoosoitteeseen {log.destination_ip} ({log.protocol}){" "}
         <span className="red"> {date} </span>klo {time}
       </li>
     );
   }
+  if (serviceType === "router" && logsName === "attack_type" && log.protocol) {
+    return (
+      <li className="log">
+        Reitittimeen hyökättiin <span className="blue">{log.value} </span>
+        protokollalla <span className="pink">{log.protocol}</span>{" "}
+        <span className="red">{date}</span> klo {time}
+      </li>
+    );
+  }
 };
 
-const formatRouterTrafficlog = (str)=>{
-  if(str==="forwarded"){
+const formatRouterTrafficlog = (str) => {
+  if (str === "forwarded") {
     return "ohjasi";
-  }
-  else if(str==="allowed"){
+  } else if (str === "allowed") {
     return "salli";
-  }
-  else if(str==="blocked"){
+  } else if (str === "blocked") {
     return "esti";
+  } else if (str === "denied") {
+    return "kielsi";
   }
-  else if(str==="denied"){
-    return "kielsi"
-  }
-}
+};
 export default LogRecord;

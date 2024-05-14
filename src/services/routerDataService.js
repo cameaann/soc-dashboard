@@ -18,10 +18,36 @@ const getTrafficControlEvents = (time) => {
     });
     console.log(trafficEvents);
     return trafficEvents;
-
   });
 
   return data;
 };
 
-export default { getTrafficControlEvents };
+const getAttackTypeChartData = (time) => {
+  // try {
+  const data = getRouterData().then((res) => {
+    const filteredByTimeData = applyTimeFilter(res, time);
+
+    const grouped = filteredByTimeData.reduce((acc, { protocol }) => {
+      if (protocol) {
+        acc[protocol] = (acc[protocol] || 0) + 1;
+      }
+      return acc;
+    }, {});
+
+    const attackTypes = Object.keys(grouped).map((protocol) => ({
+      label: protocol,
+      value: grouped[protocol],
+    }));
+    console.log(attackTypes);
+
+    return attackTypes;
+  });
+  return data;
+  // } catch (error) {
+  //   console.error("Error fetching attack type chart data:", error);
+  //   throw error;
+  // }
+};
+
+export default { getTrafficControlEvents, getAttackTypeChartData };
