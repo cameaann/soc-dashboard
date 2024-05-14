@@ -50,6 +50,10 @@ const getLogsData = async (info, data, timePeriod) => {
   if (info === "router") {
     const res = await axios.get(routerDataUrl);
     const filteredByTimeData = applyTimeFilter(res.data, timePeriod);
+    if(data === "attack-type"){
+      let attacks = filteredByTimeData.filter(x => x.attack_type!=null)
+      return attacks;
+    }
 
     return filteredByTimeData;
   }
