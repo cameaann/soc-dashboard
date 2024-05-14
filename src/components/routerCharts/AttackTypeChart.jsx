@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import routerDataService from "../../services/routerDataService";
 import AdditionalInfo from "../AdditionalInfo";
@@ -13,7 +13,6 @@ const AttackTypeChart = ({ time }) => {
   useEffect(() => {
     try {
       routerDataService.getAttackTypeChartData(time).then((res) => {
-        console.log(res);
         setData(res);
         setLoading(false);
       });
@@ -23,7 +22,7 @@ const AttackTypeChart = ({ time }) => {
   }, [time]);
 
   const showLogs = () => {
-    navigate(`/logs?service=router&logs-name=attack_type&logs-name=protocol`);
+    navigate(`/logs?service=router&logs-name=attack-type&logs-name=protocol`);
   };
 
   return (
