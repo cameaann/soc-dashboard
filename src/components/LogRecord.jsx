@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 
 const LogRecord = ({ log, serviceType, logsName }) => {
   let date = dayjs(log.timestamp).format("DD-MM-YYYY");
-  let time = dayjs(log.timestamp).format("HH:MM");
+  let time = dayjs(log.timestamp).format("HH:mm:ss");
 
   if (serviceType === "server" && logsName === "login-attempts") {
     return (
