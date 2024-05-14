@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import firewallDataService from "../../services/firewallDataService";
 import EventsDistribution from "./EventsDistribution";
 
-const FirewallData = () => {
+const FirewallData = ({ filter }) => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    firewallDataService.getEventDistribution().then((res) => {
+    firewallDataService.getEventDistribution(filter).then((res) => {
       setEvents(res);
     });
-  }, []);
+  }, [filter]);
 
   return (
     <div className="component-container">

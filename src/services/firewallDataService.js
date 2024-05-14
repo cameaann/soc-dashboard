@@ -1,8 +1,10 @@
-import { getFirewallData } from './socDataService'
+import { getFirewallData } from "./socDataService";
+import { applyTimeFilter } from "./filterTimeService";
 
-const getEventDistribution = () =>{
+const getEventDistribution = (time) => {
   const eventDistData = getFirewallData().then((result) => {
-    const grouped = Object.groupBy(result, ({ action }) => action);
+    const filteredByTimeData = applyTimeFilter(result, time);
+    const grouped = Object.groupBy(filteredByTimeData, ({ action }) => action);
     const data = Object.keys(grouped).map((item) => {
       return {
         id: item,
@@ -11,8 +13,8 @@ const getEventDistribution = () =>{
       };
     });
     return data;
-  })
+  });
   return eventDistData;
-}
+};
 
-export default { getEventDistribution }
+export default { getEventDistribution };
