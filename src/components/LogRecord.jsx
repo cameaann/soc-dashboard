@@ -27,19 +27,29 @@ const LogRecord = ({ log, serviceType, logsName }) => {
   if (serviceType === "firewall" && logsName === "firewall-distribution") {
     return (
       <li className="log">
-        Palamuuri{" "}
-        <span className="blue">{formatLog(log.action)}</span>{" "}
+        Palamuuri <span className="blue">{formatLog(log.action)}</span>{" "}
         yhteydenoton IP-osoitteesta {log.destination_ip} porttiin{" "}
         {log.destination_port} ({log.protocol}){" "}
         <span className="red"> {date} </span>klo {time}
       </li>
     );
   }
+  if (
+    serviceType === "firewall" &&
+    logsName === "system-vulnerabilities" &&
+    log.action === "detected"
+  ) {
+    return (
+      <li className="log">
+        Palamuuri havaittiin suuren määrän ({log.protocol}) IP-osoitteesta{" "}
+        {log.destination_ip} <span className="red"> {date} </span>klo {time}
+      </li>
+    );
+  }
   if (serviceType === "router" && logsName === "traffic-control") {
     return (
       <li className="log">
-        Reititin{" "}
-        <span className="blue">{formatLog(log.action)} </span>
+        Reititin <span className="blue">{formatLog(log.action)} </span>
         liikennettä IP-osoitteesta <span className="pink">
           {log.source_ip}
         </span>{" "}
