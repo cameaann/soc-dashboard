@@ -2,11 +2,12 @@ import { ResponsivePie } from "@nivo/pie";
 import AdditionalInfo from "../AdditionalInfo";
 import { useNavigate } from "react-router-dom";
 import { THEME } from "../../../constants";
+import { getEventDistribution } from "../../services/firewallDataService";
 
-const EventsDistribution = ({ events }) => {
+const EventsDistribution = ({ events, time }) => {
   const navigate = useNavigate();
-
-  const total = events.reduce((acc, item) => acc + item.value, 0);
+  const filteredEvents = getEventDistribution(events, time);
+  const total = filteredEvents.reduce((acc, item) => acc + item.value, 0);
 
   const showLogs = () => {
     navigate(
@@ -17,7 +18,7 @@ const EventsDistribution = ({ events }) => {
   return (
     <div className="chart-container">
       <div className="chart pie" onClick={showLogs}>
-      <h4 className="chart-heading">Firewall events distribution</h4>
+        <h4 className="chart-heading">Firewall events distribution</h4>
         <div className="pie-chart">
           <ResponsivePie
             theme={THEME}
@@ -25,7 +26,7 @@ const EventsDistribution = ({ events }) => {
             arcLinkLabelsDiagonalLength={13}
             arcLinkLabelsStraightLength={13}
             padding={0.3}
-            data={events}
+            data={filteredEvents}
             arcLinkLabelsSkipAngle={10}
             arcLinkLabelsTextOffset={8}
             arcLinkLabelsTextColor="#FFFFFF"
@@ -40,7 +41,11 @@ const EventsDistribution = ({ events }) => {
           />
         </div>
       </div>
-      <AdditionalInfo onShowLogs={showLogs} totalNumber={total} text={"Total events"} />
+      <AdditionalInfo
+        onShowLogs={showLogs}
+        totalNumber={total}
+        text={"Total events"}
+      />
     </div>
   );
 };

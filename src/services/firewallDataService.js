@@ -1,20 +1,32 @@
-import { getFirewallData } from "./socDataService";
 import { applyTimeFilter } from "./filterTimeService";
 
-const getEventDistribution = (time) => {
-  const eventDistData = getFirewallData().then((result) => {
-    const filteredByTimeData = applyTimeFilter(result, time);
-    const grouped = Object.groupBy(filteredByTimeData, ({ action }) => action);
-    const data = Object.keys(grouped).map((item) => {
-      return {
-        id: item,
-        label: item,
-        value: grouped[item].length,
-      };
-    });
-    return data;
+export const getEventDistribution = (events, time) => {
+  const filteredByTimeData = applyTimeFilter(events, time);
+  const grouped = Object.groupBy(filteredByTimeData, ({ action }) => action);
+  const data = Object.keys(grouped).map((item) => {
+    return {
+      id: item,
+      label: item,
+      value: grouped[item].length,
+    };
   });
-  return eventDistData;
+  return data;
 };
 
-export default { getEventDistribution };
+export const getSystemVulnerabilities = (events, time) => {
+  const filteredByTimeData = applyTimeFilter(events, time);
+  const filterByDetected = filteredByTimeData.filter(
+    (log) => log.action === "detected"
+  );
+  const grouped = Object.groupBy(
+    filterByDetected,
+    ({ source_ip }) => source_ip
+  );
+  const data = Object.keys(grouped).map((item) => {
+    return {
+      id: item,
+      value: grouped[item].length,
+    };
+  });
+  return data;
+};
