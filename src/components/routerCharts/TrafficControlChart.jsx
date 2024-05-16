@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import routerDataService from "../../services/routerDataService";
 import AdditionalInfo from "../AdditionalInfo";
 import { ResponsivePie } from "@nivo/pie";
-import { THEME } from "../../../constants";
+import { THEME, COLORS } from "../../../constants";
 
 const TrafficControlChart = (props) => {
   const [data, setData] = useState([]);
@@ -29,7 +29,6 @@ const TrafficControlChart = (props) => {
     navigate(`/logs?service=router&logs-name=traffic-control`);
   };
 
-  console.log(data);
   return (
     <div className="chart-container">
       {loading && <span className="loader"></span>}
@@ -39,33 +38,78 @@ const TrafficControlChart = (props) => {
           <ResponsivePie
             theme={THEME}
             data={data}
-            keys={["blocked", "allowed", "forwarded",  "denied"]}
             margin={{ top: 20, right: 10, bottom: 20, left: 0 }}
             startAngle={-174}
             innerRadius={0.3}
             padAngle={0.7}
             cornerRadius={3}
-            colors={["#F47560", "#684BDB", "#E7A838", "#F0E15B"]}
             activeInnerRadiusOffset={2}
             activeOuterRadiusOffset={6}
-            borderWidth={1}
-            borderColor={{
-              from: "color",
-              modifiers: [["darker", 0.2]],
-            }}
             arcLinkLabelsSkipAngle={10}
-            arcLinkLabelsTextOffset={8}
+            arcLinkLabelsTextOffset={6}
             arcLinkLabelsTextColor="#FFFFFF"
             arcLinkLabelsOffset={-8}
             arcLinkLabelsDiagonalLength={13}
             arcLinkLabelsStraightLength={13}
             arcLinkLabelsThickness={2}
-            arcLinkLabelsColor={{ from: "color" }}
+            arcLinkLabelsColor={"#aaa"}
             arcLabelsSkipAngle={10}
             arcLabelsTextColor={{
               from: "color",
-              modifiers: [["darker", 2]],
+              modifiers: [["darker", 4]],
             }}
+            defs={[
+              {
+                id: "blocked",
+                type: "patternDots",
+                background: COLORS.blocked,
+                color: COLORS.blocked,
+              },
+              {
+                id: "allowed",
+                type: "patternDots",
+                background: COLORS.allowed,
+                color: COLORS.allowed,
+              },
+              {
+                id: "forwarded",
+                type: "patternDots",
+                background: COLORS.forwarded,
+                color: COLORS.forwarded,
+              },
+              {
+                id: "denied",
+                type: "patternDots",
+                background: COLORS.denied,
+                color: COLORS.denied,
+              },
+            ]}
+            fill={[
+              {
+                match: {
+                  id: "blocked",
+                },
+                id: "blocked",
+              },
+              {
+                match: {
+                  id: "allowed",
+                },
+                id: "allowed",
+              },
+              {
+                match: {
+                  id: "forwarded",
+                },
+                id: "forwarded",
+              },
+              {
+                match: {
+                  id: "denied",
+                },
+                id: "denied",
+              },
+            ]}
           />
         </div>
       </div>

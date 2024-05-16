@@ -35,7 +35,7 @@ const AttackTypeChart = ({ time }) => {
           data={data}
           keys={["value", "protocol"]}
           indexBy="label"
-          margin={{ top: 90, right: 30, bottom: 90, left: 50 }}
+          margin={{ top: 40, right: 30, bottom: 90, left: 50 }}
           colors={{ scheme: "pastel1" }}
           axisBottom={{
             legend: "Protocol",
