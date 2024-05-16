@@ -9,6 +9,7 @@ const FirewallData = ({ filter }) => {
   useEffect(() => {
     getFirewallData().then((res) => {
       setEvents(res);
+      console.log(res);
     });
   }, [filter]);
 

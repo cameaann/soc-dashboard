@@ -22,6 +22,7 @@ const EventsDistribution = ({ events, time }) => {
         <div className="pie-chart">
           <ResponsivePie
             theme={THEME}
+            keys={["blocked", "allowed", "detected"]}
             margin={{ top: 20, right: 10, bottom: 20, left: 0 }}
             arcLinkLabelsDiagonalLength={13}
             arcLinkLabelsStraightLength={13}
@@ -38,6 +39,9 @@ const EventsDistribution = ({ events, time }) => {
               from: "color",
               modifiers: [["darker", 2]],
             }}
+            padAngle={0.2}
+            cornerRadius={4}
+            colors={["#FF7777", "#694BDB", "#f1e15b"]}
           />
         </div>
       </div>

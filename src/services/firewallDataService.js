@@ -6,8 +6,8 @@ export const getEventDistribution = (events, time) => {
   const data = Object.keys(grouped).map((item) => {
     return {
       id: item,
-      label: item,
       value: grouped[item].length,
+      color: "hsl(70, 70%, 50%)",
     };
   });
   return data;
