@@ -29,6 +29,7 @@ const TrafficControlChart = (props) => {
     navigate(`/logs?service=router&logs-name=traffic-control`);
   };
 
+  console.log(data);
   return (
     <div className="chart-container">
       {loading && <span className="loader"></span>}
@@ -38,11 +39,13 @@ const TrafficControlChart = (props) => {
           <ResponsivePie
             theme={THEME}
             data={data}
+            keys={["blocked", "allowed", "forwarded",  "denied"]}
             margin={{ top: 20, right: 10, bottom: 20, left: 0 }}
             startAngle={-174}
             innerRadius={0.3}
             padAngle={0.7}
             cornerRadius={3}
+            colors={["#F47560", "#684BDB", "#E7A838", "#F0E15B"]}
             activeInnerRadiusOffset={2}
             activeOuterRadiusOffset={6}
             borderWidth={1}
