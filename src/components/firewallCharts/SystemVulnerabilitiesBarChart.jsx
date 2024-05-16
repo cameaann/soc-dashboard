@@ -48,7 +48,7 @@ const SystemVulnerabilitiesBarChart = ({ events, time, loading }) => {
           }}
           labelSkipWidth={12}
           labelSkipHeight={12}
-          labelTextColor="white"
+          labelTextColor="black"
         />
       </div>
       <AdditionalInfo

@@ -16,18 +16,25 @@ export const THEME = {
     outlineColor: "#dfd3d3",
     fontFamily: "Gotham, sans serif",
   },
-  labels:{
-    text:{
-      fill:"#000000",
+  labels: {
+    text: {
+      fill: "#000000",
       color: "#000000",
-      fontWeight:'bold',
+      fontWeight: "bold",
       fontFamily: "GothamMedium, sans serif",
-     
-    }
+    },
   },
   tooltip: {
     container: {
       color: "#000000",
     },
   },
+};
+
+export const COLORS = {
+  blocked: "#FF7777",
+  allowed: "#694BDB",
+  detected: "#F1E15B",
+  forwarded: "#E7A838",
+  denied: "#F0E15B",
 };
