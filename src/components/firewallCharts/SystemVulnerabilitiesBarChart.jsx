@@ -30,7 +30,7 @@ const SystemVulnerabilitiesBarChart = ({ events, time, loading }) => {
           groupMode="grouped"
           valueScale={{ type: "linear" }}
           indexScale={{ type: "band", round: true }}
-          colors={["#694BDB", "#FF7777"]}
+          colors={["#f1e15b"]}
           borderColor={{ from: "color", modifiers: [["darker", 0.6]] }}
           axisBottom={{
             legend: "Source IP",
@@ -49,31 +49,6 @@ const SystemVulnerabilitiesBarChart = ({ events, time, loading }) => {
           labelSkipWidth={12}
           labelSkipHeight={12}
           labelTextColor="white"
-          legends={[
-            {
-              dataFrom: "keys",
-              anchor: "bottom-left",
-              direction: "row",
-              justify: false,
-              translateX: 0,
-              translateY: 50,
-              itemsSpacing: 2,
-              itemWidth: 100,
-              itemHeight: 20,
-              itemDirection: "left-to-right",
-              itemOpacity: 0.85,
-              symbolShape: "circle",
-              symbolSize: 10,
-              effects: [
-                {
-                  on: "hover",
-                  style: {
-                    itemOpacity: 1,
-                  },
-                },
-              ],
-            },
-          ]}
         />
       </div>
       <AdditionalInfo

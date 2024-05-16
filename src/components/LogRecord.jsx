@@ -41,8 +41,10 @@ const LogRecord = ({ log, serviceType, logsName }) => {
   ) {
     return (
       <li className="log">
-        Palamuuri havaittiin suuren määrän ({log.protocol}) IP-osoitteesta{" "}
-        {log.destination_ip} <span className="red"> {date} </span>klo {time}
+        Palamuuri havaittiin suuren määrän ({log.protocol}
+        {", "}
+        {log.description}) IP-osoitteesta {log.destination_ip}{" "}
+        <span className="red"> {date} </span>klo {time}
       </li>
     );
   }
