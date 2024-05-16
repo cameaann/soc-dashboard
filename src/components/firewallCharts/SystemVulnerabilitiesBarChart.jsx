@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { THEME } from "../../../constants";
 import { getSystemVulnerabilities } from "../../services/firewallDataService";
 
-const SystemVulnerabilitiesBarChart = ({ events, time }) => {
+const SystemVulnerabilitiesBarChart = ({ events, time, loading }) => {
   const navigate = useNavigate();
   const filteredEvents = getSystemVulnerabilities(events, time);
   const total = filteredEvents.reduce((acc, item) => acc + item.value, 0);
@@ -17,6 +17,7 @@ const SystemVulnerabilitiesBarChart = ({ events, time }) => {
 
   return (
     <div className="chart-container">
+      {loading && <span className="loader"></span>}
       <div className="chart" onClick={showLogs}>
         <h4 className="chart-heading">System Vulnerabilities Chart</h4>
         <ResponsiveBar
