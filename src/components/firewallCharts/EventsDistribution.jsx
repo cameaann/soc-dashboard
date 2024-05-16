@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { THEME } from "../../../constants";
 import { getEventDistribution } from "../../services/firewallDataService";
 
-const EventsDistribution = ({ events, time }) => {
+const EventsDistribution = ({ events, time, loading }) => {
   const navigate = useNavigate();
   const filteredEvents = getEventDistribution(events, time);
   const total = filteredEvents.reduce((acc, item) => acc + item.value, 0);
@@ -17,6 +17,7 @@ const EventsDistribution = ({ events, time }) => {
 
   return (
     <div className="chart-container">
+      {loading && <span className="loader"></span>}
       <div className="chart pie" onClick={showLogs}>
         <h4 className="chart-heading">Firewall events distribution</h4>
         <div className="pie-chart">
