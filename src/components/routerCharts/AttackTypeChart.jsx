@@ -29,16 +29,16 @@ const AttackTypeChart = ({ time }) => {
     <div className="chart-container">
       {loading && <span className="loader"></span>}
       <div className="chart" onClick={showLogs}>
-        <h4 className="chart-heading">Attack Types by Protocol</h4>
+        <h4 className="chart-heading">Hyökkäystyyppien protokollat</h4>
         <ResponsiveBar
           theme={THEME}
           data={data}
-          keys={["value", "protocol"]}
+          keys={["hyökkäykset", "protocol"]}
           indexBy="label"
           margin={{ top: 40, right: 30, bottom: 90, left: 50 }}
           colors={{ scheme: "pastel1" }}
           axisBottom={{
-            legend: "Protocol",
+            legend: "Protokolla",
             legendPosition: "middle",
             legendOffset: 40,
           }}
@@ -46,7 +46,7 @@ const AttackTypeChart = ({ time }) => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: "Attacks",
+            legend: "Hyökkäykset",
             legendPosition: "middle",
             legendOffset: -40,
           }}
@@ -57,8 +57,8 @@ const AttackTypeChart = ({ time }) => {
       </div>
       <AdditionalInfo
         onShowLogs={showLogs}
-        totalNumber={data.reduce((acc, cur) => acc + cur.value, 0)}
-        text={"Total attacks"}
+        totalNumber={data.reduce((acc, cur) => acc + cur.hyökkäykset, 0)}
+        text={"Yhteismäärä"}
       />
     </div>
   );

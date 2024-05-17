@@ -5,7 +5,7 @@ const AdditionalInfo = ({ onShowLogs, totalNumber, text }) => {
         <h4>{text}</h4>
         <div className="totalNumberInfo">{totalNumber}</div>
         <button className="show-btn" onClick={onShowLogs}>
-          See details
+          Katso lisää
         </button>
       </div>
     </div>

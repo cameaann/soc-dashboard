@@ -28,7 +28,7 @@ const SystemUpdatesChart = (props) => {
   };
 
   const totalAttempts = data.reduce((sum, x) => {
-    sum += x.failed + x.successed;
+    sum += x.epäonnistuneet + x.onnistuneet;
     return sum;
   }, 0);
 
@@ -36,11 +36,11 @@ const SystemUpdatesChart = (props) => {
     <div className="chart-container">
       {loading && <span className="loader"></span>}
       <div className="chart" onClick={showLogs}>
-        <h4 className="chart-heading">System Update attempts</h4>
+        <h4 className="chart-heading">Järjestelmän päivitysyritykset</h4>
         <ResponsiveBar
           theme={THEME}
           data={data}
-          keys={["successed", "failed"]}
+          keys={["onnistuneet", "epäonnistuneet"]}
           indexBy="server"
           margin={{ top: 50, right: 50, bottom: 80, left: 30 }}
           padding={0.3}
@@ -99,7 +99,7 @@ const SystemUpdatesChart = (props) => {
       <AdditionalInfo
         onShowLogs={showLogs}
         totalNumber={totalAttempts}
-        text={"Total updates"}
+        text={"Yhteismäärä"}
       />
     </div>
   );
