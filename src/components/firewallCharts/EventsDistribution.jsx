@@ -19,7 +19,7 @@ const EventsDistribution = ({ events, time, loading }) => {
     <div className="chart-container">
       {loading && <span className="loader"></span>}
       <div className="chart pie" onClick={showLogs}>
-        <h4 className="chart-heading">Firewall events distribution</h4>
+        <h4 className="chart-heading">Palomuuritapahtumien jakaantuminen</h4>
         <div className="pie-chart">
           <ResponsivePie
             theme={THEME}
@@ -87,7 +87,7 @@ const EventsDistribution = ({ events, time, loading }) => {
       <AdditionalInfo
         onShowLogs={showLogs}
         totalNumber={total}
-        text={"Total events"}
+        text={"Yhteismäärä"}
       />
     </div>
   );

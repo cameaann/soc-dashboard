@@ -13,22 +13,22 @@ const getLoginAttempts = (time) => {
     let loginAttempts = Object.entries(groupedArray)
       .map(([server, events]) => {
         let emp = {
-          failed: 0,
-          successed: 0,
+          epäonnistuneet: 0,
+          onnistuneet: 0,
           server: server,
         };
         events.reduce((acc, el) => {
           if (el.event_type === "login" && el.status === "success") {
-            acc.successed++;
+            acc.onnistuneet++;
           }
           if (el.event_type === "login" && el.status === "failed") {
-            acc.failed++;
+            acc.epäonnistuneet++;
           }
           return acc;
         }, emp);
         return emp;
       })
-      .filter((emp) => emp.successed + emp.failed > 0)
+      .filter((emp) => emp.onnistuneet + emp.epäonnistuneet > 0)
       .sort(byServer);
 
     return loginAttempts;
@@ -48,22 +48,22 @@ const getSystemUpdates = (time) => {
     let updateAttempts = Object.entries(groupedArray)
       .map(([server, events]) => {
         let emp = {
-          failed: 0,
-          successed: 0,
+          epäonnistuneet: 0,
+          onnistuneet: 0,
           server: server,
         };
         events.reduce((acc, el) => {
           if (el.event_type === "update" && el.status === "success") {
-            acc.successed++;
+            acc.onnistuneet++;
           }
           if (el.event_type === "update" && el.status === "failed") {
-            acc.failed++;
+            acc.onnistuneet++;
           }
           return acc;
         }, emp);
         return emp;
       })
-      .filter((emp) => emp.successed + emp.failed > 0)
+      .filter((emp) => emp.onnistuneet + emp.epäonnistuneet > 0)
       .sort(byServer);
     return updateAttempts;
   });

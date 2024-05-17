@@ -116,7 +116,7 @@ const TrafficControlChart = (props) => {
       <AdditionalInfo
         onShowLogs={showLogs}
         totalNumber={totalTrafficEvents}
-        text={"Total traffic events"}
+        text={"Yhteismäärä"}
       />
     </div>
   );

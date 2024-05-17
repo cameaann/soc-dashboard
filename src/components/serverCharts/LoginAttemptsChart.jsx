@@ -24,7 +24,7 @@ const LoginAttemptsChart = (props) => {
   }, [time]);
 
   const totalAttempts = data.reduce((sum, x) => {
-    sum += x.failed + x.successed;
+    sum += x.epäonnistuneet + x.onnistuneet;
     return sum;
   }, 0);
 
@@ -36,11 +36,11 @@ const LoginAttemptsChart = (props) => {
     <div className="chart-container">
       {loading && <span className="loader"></span>}
       <div className="chart" onClick={showLogs}>
-        <h4 className="chart-heading">Login attempts</h4>
+        <h4 className="chart-heading">Kirjautumisyritykset</h4>
         <ResponsiveBar
           theme={THEME}
           data={data}
-          keys={["successed", "failed"]}
+          keys={["onnistuneet", "epäonnistuneet"]}
           indexBy="server"
           margin={{ top: 50, right: 50, bottom: 80, left: 30 }}
           padding={0.3}
@@ -90,7 +90,7 @@ const LoginAttemptsChart = (props) => {
       <AdditionalInfo
         onShowLogs={showLogs}
         totalNumber={totalAttempts}
-        text={"Total login attemps"}
+        text={"Yhteismäärä"}
       />
     </div>
   );

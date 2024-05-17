@@ -33,7 +33,7 @@ const getAttackTypeChartData = (time) => {
 
     const attackTypes = Object.keys(grouped).map((protocol) => ({
       label: protocol,
-      value: grouped[protocol],
+      hyökkäykset: grouped[protocol],
     }));
 
     return attackTypes;

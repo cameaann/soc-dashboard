@@ -7,7 +7,7 @@ import { getSystemVulnerabilities } from "../../services/firewallDataService";
 const SystemVulnerabilitiesBarChart = ({ events, time, loading }) => {
   const navigate = useNavigate();
   const filteredEvents = getSystemVulnerabilities(events, time);
-  const total = filteredEvents.reduce((acc, item) => acc + item.value, 0);
+  const total = filteredEvents.reduce((acc, item) => acc + item.detected, 0);
 
   const showLogs = () => {
     navigate(
@@ -19,11 +19,11 @@ const SystemVulnerabilitiesBarChart = ({ events, time, loading }) => {
     <div className="chart-container">
       {loading && <span className="loader"></span>}
       <div className="chart" onClick={showLogs}>
-        <h4 className="chart-heading">System Vulnerabilities Chart</h4>
+        <h4 className="chart-heading">Järjestelmän haavoittuvuudet</h4>
         <ResponsiveBar
           theme={THEME}
           data={filteredEvents}
-          keys={["value"]}
+          keys={["detected"]}
           indexBy="id"
           margin={{ top: 50, right: 50, bottom: 80, left: 30 }}
           padding={0.3}
@@ -33,7 +33,7 @@ const SystemVulnerabilitiesBarChart = ({ events, time, loading }) => {
           colors={["#f1e15b"]}
           borderColor={{ from: "color", modifiers: [["darker", 0.6]] }}
           axisBottom={{
-            legend: "Source IP",
+            legend: "IP Osoite",
             legendPosition: "middle",
             legendOffset: 40,
           }}
@@ -54,7 +54,7 @@ const SystemVulnerabilitiesBarChart = ({ events, time, loading }) => {
       <AdditionalInfo
         onShowLogs={showLogs}
         totalNumber={total}
-        text={"Total detected"}
+        text={"Yhteismäärä"}
       />
     </div>
   );
