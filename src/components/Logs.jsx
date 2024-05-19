@@ -35,13 +35,30 @@ const LogsComponent = () => {
   }
 
   const formatString = (val) => {
-    let fStr = val.split("-").join(" ");
-    return fStr;
+    if(val==="login-attempts"){
+      return "Kirjautumisyritysten lokit"
+    }
+    if(val==="updates"){
+      return "Järjestelmäpäivitysten lokit"
+    }
+    if(val==="firewall-distribution"){
+      return "Palomuuritapahtumien jakautumisen lokit"
+    }
+    if(val==="system-vulnerabilities"){
+      return "Järjestelmän haavoittuvuuksien lokit"
+    }
+    if(val==="traffic-control"){
+      return "Liikenteen ohjauksen lokit"
+    }
+    if(val==="attack-type"){
+      return "Hyökkäystyyppien lokit"
+    }
   };
 
+  console.log(logsName);
   return (
     <div>
-      <h2 className="main-heading">{formatString(logsName)} logs</h2>
+      <h2 className="main-heading">{formatString(logsName)}</h2>
       <ul>{listItems}</ul>
     </div>
   );
