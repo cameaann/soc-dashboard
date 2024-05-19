@@ -47,18 +47,27 @@ const EventsDistribution = ({ events, time, loading }) => {
                 type: "patternDots",
                 background: COLORS.blocked,
                 color: COLORS.blocked,
+                size: 6, 
+                padding: 3,
+                stagger: true,
               },
               {
                 id: "allowed",
                 type: "patternDots",
                 background: COLORS.allowed,
                 color: COLORS.allowed,
+                size: 6,
+                padding: 3,
+                stagger: true,
               },
               {
                 id: "detected",
                 type: "patternDots",
                 background: COLORS.detected,
                 color: COLORS.detected,
+                size: 6,
+                padding: 3,
+                stagger: true,
               },
             ]}
             fill={[
