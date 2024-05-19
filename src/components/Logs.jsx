@@ -55,7 +55,6 @@ const LogsComponent = () => {
     }
   };
 
-  console.log(logsName);
   return (
     <div>
       <h2 className="main-heading">{formatString(logsName)}</h2>
