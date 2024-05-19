@@ -1,6 +1,9 @@
+[(Read in Finnish)](https://github.com/cameaann/soc-dashboard/blob/main/README.fi.md)
+
 # Security Operations Center (SOC) Dashboard 
 
-## Introduction
+## Introduction 
+
 This is a studying project of a small group of students.
 Security Operations Center (SOC) Dashboard provides users with a visual overview of the organization's security status.
 
