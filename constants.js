@@ -1,5 +1,5 @@
 export const DATA_URL =
-  "https://app-soc-data-server.wonderfulcliff-356171e4.northeurope.azurecontainerapps.io/dynlogs";
+  "https://app-soc-data-server.politefield-c4736012.northeurope.azurecontainerapps.io/dynlogs";
 
 export const THEME = {
   axis: {
